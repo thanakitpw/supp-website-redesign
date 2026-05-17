@@ -15,6 +15,8 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
 - เฟส 4 Design — 🔵 WIP (T4.1✅ T4.2✅ T4.3✅ · **T4.4 = 🚪 รอลูกค้า approve prototype**) · 🔒 single agent
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
+- ✅ **Content dependency resolved**: ลูกค้าส่ง `assets/Website SUPP.docx` → extract เป็น `migration/content-spec.md` (SOURCE OF TRUTH rewrite เฟส 5). โลโก้จริง `assets/SUPP-Logo*.png`. หน้า prototype: home ใช้ copy จริงแล้ว; about/services/blog/join จะลง copy จริงตอนเฟส 5 Lane A (จาก content-spec.md)
+- 📌 Content findings: เว็บใหม่ = Home·About Us·Services·Blog·Join Us (+contact ใน footer); menu=หน้าแรก·เกี่ยวกับเรา·บริการ·บทความ(·ร่วมงานกับเรา); CTA หลัก="ขอคำปรึกษาเบื้องต้น", Join="ลงทะเบียน Open House"; มี testimonial จริง 3, social จริง (fb supp.th / ig supp_th / yt @supp_th / line B2kooV8)
 - เฟส 4 Design — ⬜ TODO
 - เฟส 5 Build — ⬜ TODO
 - เฟส 6–8 — ⬜ TODO

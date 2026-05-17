@@ -34,8 +34,9 @@ p{margin:.6em 0}
 /* header */
 header.top{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-family:"DM Sans";font-weight:700;font-size:1.45rem;color:var(--brand);letter-spacing:-.5px}
-.logo small{display:block;font-size:.52rem;letter-spacing:3px;color:var(--ink);font-weight:600}
+.logo{display:block;width:132px;height:42px;background:url(logo.png) left center/contain no-repeat;text-indent:-9999px;overflow:hidden;white-space:nowrap}
+.logo small{display:none}
+footer.ft .logo{width:150px;height:48px;background-image:url(logo-white.png)}
 .menu{display:flex;gap:30px;list-style:none;font-weight:500;font-size:.95rem}
 .menu a{color:var(--ink)}.menu a:hover{color:var(--brand)}
 .burger{display:none;font-size:1.6rem;background:none;border:0;color:var(--ink)}

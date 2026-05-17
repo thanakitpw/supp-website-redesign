@@ -58,7 +58,7 @@
 
 ## 7. Dependency / Open item
 
-- [ ] ไฟล์ content ปรับใหม่ (ลูกค้าส่ง)
+- [x] ไฟล์ content ปรับใหม่ (ลูกค้าส่ง) — `assets/Website SUPP.docx` → `migration/content-spec.md`
 - [ ] WP access credential (ยืนยันมี)
 - [ ] Supabase project ref + service role key (ส่งให้ → ตั้งใน `.env.local`)
 - [ ] ยืนยัน schema `articles` ตรง data contract ของ `seo-blog-publisher` หรือต้องปรับ
