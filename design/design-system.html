@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUPP — Design System v1 (รออนุมัติ)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--brand:#046BD2;--brand-dark:#045CB4;--brand-soft:#E8F1FB;--accent:#AD1919;
+--ink:#0F172A;--heading:#1E293B;--body:#334155;--muted:#64748B;
+--border:#E2E8F0;--surface:#F0F5FA;--bg:#FFFFFF;--success:#15803D;--warning:#B45309;
+--r-sm:6px;--r-md:10px;--r-lg:16px;--r-pill:999px;
+--s-sm:0 1px 2px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.08);
+--s-md:0 4px 12px rgba(15,23,42,.10);--s-lg:0 12px 32px rgba(15,23,42,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans Thai","DM Sans",system-ui,sans-serif;color:var(--body);background:var(--surface);line-height:1.7;-webkit-font-smoothing:antialiased}
+.num,code{font-family:"DM Sans",monospace}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header.top{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.navbar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"DM Sans";font-weight:700;font-size:1.4rem;color:var(--brand);letter-spacing:-.5px}
+.logo span{color:var(--ink)}
+.nav-links{display:flex;gap:28px;list-style:none;font-weight:500;font-size:.95rem}
+.nav-links a{color:var(--heading);text-decoration:none}
+.nav-links a:hover{color:var(--brand)}
+section.block{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px;margin:24px 0;box-shadow:var(--s-sm)}
+h1{font-size:2.5rem;font-weight:700;color:var(--ink);line-height:1.2;letter-spacing:-.5px}
+h2{font-size:1.5rem;font-weight:600;color:var(--heading);margin-bottom:6px}
+h3{font-size:1.05rem;font-weight:600;color:var(--heading);margin:18px 0 10px}
+.lead{font-size:1.15rem;color:var(--muted);margin-top:10px}
+.eyebrow{display:inline-block;font-family:"DM Sans";font-weight:600;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--brand);background:var(--brand-soft);padding:5px 12px;border-radius:var(--r-pill);margin-bottom:14px}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:760px){.g4,.g3,.g2{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+.sw{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border)}
+.sw .c{height:74px}.sw .l{padding:8px 10px;font-size:.78rem;background:var(--bg)}
+.sw .l b{display:block;color:var(--heading)}.sw .l span{color:var(--muted);font-family:"DM Sans"}
+.btn{font-family:inherit;font-weight:600;font-size:.95rem;border:1px solid transparent;border-radius:var(--r-md);padding:11px 22px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+.btn-secondary{background:var(--brand-soft);color:var(--brand-dark)}.btn-secondary:hover{background:#d8e8f8}
+.btn-ghost{background:transparent;color:var(--heading);border-color:var(--border)}.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.btn-lg{padding:15px 30px;font-size:1.05rem}
+.btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.field{margin-bottom:16px}
+label{display:block;font-weight:500;font-size:.9rem;color:var(--heading);margin-bottom:6px}
+input,select,textarea{width:100%;font-family:inherit;font-size:.98rem;color:var(--body);padding:11px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--bg)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;box-shadow:var(--s-sm);transition:.2s}
+.card:hover{box-shadow:var(--s-md);transform:translateY(-2px)}
+.badge{display:inline-block;font-size:.75rem;font-weight:600;padding:4px 11px;border-radius:var(--r-pill)}
+.b-brand{background:var(--brand-soft);color:var(--brand-dark)}
+.b-ok{background:#DCFCE7;color:var(--success)}
+.b-acc{background:#FBE5E5;color:var(--accent)}
+.alert{display:flex;gap:12px;padding:14px 18px;border-radius:var(--r-md);font-size:.95rem;border:1px solid}
+.alert-ok{background:#F0FDF4;border-color:#BBF7D0;color:var(--success)}
+.alert-info{background:var(--brand-soft);border-color:#BBD9F5;color:var(--brand-dark)}
+.crumb{font-size:.85rem;color:var(--muted)}.crumb a{color:var(--brand);text-decoration:none}
+.slot{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.slot button{font-family:inherit;padding:12px 0;border:1px solid var(--border);border-radius:var(--r-md);background:var(--bg);color:var(--heading);font-weight:500;cursor:pointer;transition:.15s}
+.slot button:hover{border-color:var(--brand);color:var(--brand)}
+.slot button[aria-pressed=true]{background:var(--brand);color:#fff;border-color:var(--brand)}
+.slot button:disabled{color:var(--muted);background:var(--surface);cursor:not-allowed;text-decoration:line-through}
+.type-row{display:flex;align-items:baseline;gap:18px;padding:10px 0;border-bottom:1px dashed var(--border)}
+.type-row .tag{font-family:"DM Sans";font-size:.75rem;color:var(--muted);width:120px;flex:none}
+.spacer{display:flex;align-items:flex-end;gap:10px}
+.spacer i{display:block;background:var(--brand);border-radius:3px;width:28px}
+.spacer figure{text-align:center;font-family:"DM Sans";font-size:.72rem;color:var(--muted)}
+footer.ft{background:var(--ink);color:#CBD5E1;padding:40px 0;margin-top:24px}
+footer.ft .logo span{color:#fff}
+.note{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;padding:12px 16px;border-radius:var(--r-md);font-size:.9rem;margin:16px 0}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap navbar">
+<div class="logo">SUPP<span>.</span></div>
+<ul class="nav-links"><li><a href="#">หน้าแรก</a></li><li><a href="#">เกี่ยวกับ SUPP</a></li><li><a href="#">บริการ</a></li><li><a href="#">บทความ</a></li><li><a href="#">ร่วมงาน</a></li></ul>
+<a class="btn btn-primary" href="#">จองนัดปรึกษาฟรี</a>
+</div></header>
+
+<div class="wrap">
+
+<section class="block">
+<span class="eyebrow">Design System v1</span>
+<h1>วางแผนการเงินที่เริ่มจาก<br>เป้าหมายของคุณ</h1>
+<p class="lead">ระบบดีไซน์สำหรับเว็บ SUPP ใหม่ — โทนน่าเชื่อถือ อบอุ่น ทันสมัย คงเอกลักษณ์น้ำเงินและโลโก้เดิม</p>
+<div class="note">⚠️ หน้านี้คือตัวอย่างระบบดีไซน์เพื่อให้ลูกค้าตรวจและอนุมัติ (T4.2) ยังไม่ใช่หน้าเว็บจริง — สี/ฟอนต์/องค์ประกอบจะถูกนำไปใช้ทั้งเว็บ</div>
+<div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn btn-primary btn-lg" href="#">เริ่มวางแผนกับเรา</a>
+<a class="btn btn-ghost btn-lg" href="#">ดูบริการทั้งหมด</a>
+</div>
+</section>
+
+<section class="block">
+<h2>1 · สี (Color)</h2><p>คงน้ำเงินแบรนด์เดิม #046BD2 + neutral slate ทันสมัย</p>
+<div class="grid g4" style="margin-top:18px">
+<div class="sw"><div class="c" style="background:#046BD2"></div><div class="l"><b>Brand</b><span>#046BD2</span></div></div>
+<div class="sw"><div class="c" style="background:#045CB4"></div><div class="l"><b>Brand dark</b><span>#045CB4</span></div></div>
+<div class="sw"><div class="c" style="background:#E8F1FB"></div><div class="l"><b>Brand soft</b><span>#E8F1FB</span></div></div>
+<div class="sw"><div class="c" style="background:#AD1919"></div><div class="l"><b>Accent</b><span>#AD1919</span></div></div>
+<div class="sw"><div class="c" style="background:#0F172A"></div><div class="l"><b>Ink</b><span>#0F172A</span></div></div>
+<div class="sw"><div class="c" style="background:#1E293B"></div><div class="l"><b>Heading</b><span>#1E293B</span></div></div>
+<div class="sw"><div class="c" style="background:#334155"></div><div class="l"><b>Body</b><span>#334155</span></div></div>
+<div class="sw"><div class="c" style="background:#64748B"></div><div class="l"><b>Muted</b><span>#64748B</span></div></div>
+<div class="sw"><div class="c" style="background:#F0F5FA"></div><div class="l"><b>Surface</b><span>#F0F5FA</span></div></div>
+<div class="sw"><div class="c" style="background:#FFFFFF"></div><div class="l"><b>BG</b><span>#FFFFFF</span></div></div>
+<div class="sw"><div class="c" style="background:#15803D"></div><div class="l"><b>Success</b><span>#15803D</span></div></div>
+<div class="sw"><div class="c" style="background:#B45309"></div><div class="l"><b>Warning</b><span>#B45309</span></div></div>
+</div>
+</section>
+
+<section class="block">
+<h2>2 · ตัวอักษร (Typography)</h2><p>Noto Sans Thai (ไทย) + DM Sans (อังกฤษ/ตัวเลข)</p>
+<div style="margin-top:14px">
+<div class="type-row"><span class="tag">Display 700</span><span style="font-size:2.5rem;font-weight:700;color:var(--ink)">วางแผนการเงินเฉพาะคุณ</span></div>
+<div class="type-row"><span class="tag">H1 700</span><span style="font-size:1.95rem;font-weight:700;color:var(--ink)">เป้าหมายไม่ใช่เงิน แต่คือชีวิต</span></div>
+<div class="type-row"><span class="tag">H2 600</span><span style="font-size:1.5rem;font-weight:600;color:var(--heading)">บริการของ SUPP</span></div>
+<div class="type-row"><span class="tag">Body 400</span><span style="font-size:1rem">เราเชื่อว่าเป้าหมายของแต่ละคนไม่เหมือนกัน ให้ SUPP ช่วยสร้างแผนการเงินที่เริ่มจากชีวิตคุณ</span></div>
+<div class="type-row"><span class="tag">Numeric DM</span><span class="num" style="font-size:1.4rem;font-weight:600;color:var(--brand)">฿1,250,000 · 8.5% · 2569</span></div>
+<div class="type-row"><span class="tag">Caption</span><span style="font-size:.9rem;color:var(--muted)">อัปเดตล่าสุด 17 พฤษภาคม 2569</span></div>
+</div>
+</section>
+
+<section class="block">
+<h2>3 · ระยะห่าง & มุม & เงา</h2>
+<div class="spacer" style="margin:18px 0">
+<figure><i style="height:4px"></i>4</figure><figure><i style="height:8px"></i>8</figure><figure><i style="height:16px"></i>16</figure><figure><i style="height:24px"></i>24</figure><figure><i style="height:32px"></i>32</figure><figure><i style="height:48px"></i>48</figure><figure><i style="height:64px"></i>64</figure><figure><i style="height:96px"></i>96</figure>
+</div>
+<div class="grid g3">
+<div style="background:var(--surface);border-radius:6px;padding:18px;text-align:center;font-family:DM Sans;font-size:.85rem">radius sm 6px</div>
+<div style="background:var(--surface);border-radius:10px;padding:18px;text-align:center;font-family:DM Sans;font-size:.85rem">radius md 10px</div>
+<div style="background:var(--surface);border-radius:16px;padding:18px;text-align:center;font-family:DM Sans;font-size:.85rem">radius lg 16px</div>
+<div style="background:#fff;box-shadow:var(--s-sm);border-radius:10px;padding:18px;text-align:center;font-size:.85rem">shadow sm</div>
+<div style="background:#fff;box-shadow:var(--s-md);border-radius:10px;padding:18px;text-align:center;font-size:.85rem">shadow md</div>
+<div style="background:#fff;box-shadow:var(--s-lg);border-radius:10px;padding:18px;text-align:center;font-size:.85rem">shadow lg</div>
+</div>
+</section>
+
+<section class="block">
+<h2>4 · ปุ่ม & ฟอร์ม</h2>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0">
+<button class="btn btn-primary">ปุ่มหลัก</button>
+<button class="btn btn-secondary">ปุ่มรอง</button>
+<button class="btn btn-ghost">ปุ่มโปร่ง</button>
+<button class="btn btn-primary btn-lg">ปุ่มใหญ่ →</button>
+</div>
+<div class="grid g2" style="margin-top:18px">
+<div><div class="field"><label>ชื่อ-นามสกุล</label><input placeholder="เช่น สมชาย ใจดี"></div>
+<div class="field"><label>บริการที่สนใจ</label><select><option>วางแผนการเงินส่วนบุคคล</option><option>วางแผนเกษียณ</option><option>วางแผนภาษี</option></select></div></div>
+<div class="field"><label>ข้อความ</label><textarea rows="5" placeholder="เล่าเป้าหมายการเงินของคุณสั้นๆ"></textarea></div>
+</div>
+</section>
+
+<section class="block">
+<h2>5 · การ์ด & Badge & Alert</h2>
+<div class="grid g3" style="margin:16px 0">
+<div class="card"><span class="badge b-brand">บริการ</span><h3>วางแผนเกษียณ</h3><p style="font-size:.95rem;color:var(--muted)">คำนวณเป้าหมายและออกแบบเส้นทางสู่การเกษียณที่มั่นใจ</p><a href="#" style="color:var(--brand);font-weight:600;font-size:.9rem;text-decoration:none">ดูเพิ่มเติม →</a></div>
+<div class="card"><span class="badge b-ok">บทความ</span><h3>กฎ 24 ชั่วโมงก่อนซื้อของ</h3><p style="font-size:.95rem;color:var(--muted)">เทคนิคง่ายๆ ที่ช่วยลดรายจ่ายไม่จำเป็น</p><span style="font-size:.82rem;color:var(--muted)">อ่าน 4 นาที</span></div>
+<div class="card"><span class="badge b-acc">แนะนำ</span><h3>ตรวจสุขภาพการเงิน</h3><p style="font-size:.95rem;color:var(--muted)">เช็ก 4 ด้านใน 5 นาที พร้อมคำแนะนำเฉพาะคุณ</p><button class="btn btn-secondary" style="font-size:.85rem;padding:8px 16px">เริ่มเช็ก</button></div>
+</div>
+<div style="display:grid;gap:12px">
+<div class="alert alert-ok">✓ จองนัดสำเร็จ — เราส่งอีเมลยืนยันให้แล้ว</div>
+<div class="alert alert-info">ℹ ที่ปรึกษาจะติดต่อกลับภายใน 24 ชั่วโมง</div>
+</div>
+</section>
+
+<section class="block">
+<h2>6 · ระบบจองนัดปรึกษา (ตัวอย่าง)</h2>
+<p class="crumb"><a href="#">หน้าแรก</a> / <a href="#">บริการ</a> / จองนัดปรึกษาฟรี</p>
+<h3>เลือกช่วงเวลา — ศุกร์ 22 พ.ค. 2569</h3>
+<div class="slot" style="margin:14px 0">
+<button aria-pressed="false">09:00</button>
+<button aria-pressed="true">10:30</button>
+<button aria-pressed="false">13:00</button>
+<button disabled>14:30</button>
+<button aria-pressed="false">15:30</button>
+<button disabled>16:30</button>
+<button aria-pressed="false">17:30</button>
+<button aria-pressed="false">18:30</button>
+</div>
+<button class="btn btn-primary btn-lg">ยืนยันการจอง 10:30 →</button>
+</section>
+
+</div>
+
+<footer class="ft"><div class="wrap">
+<div class="logo">SUPP<span>.</span></div>
+<p style="margin-top:10px;font-size:.9rem">Empowering Your Financial Journey · เพราะเป้าหมายของแต่ละคนไม่เหมือนกัน</p>
+<p style="margin-top:14px;font-size:.82rem;color:#64748B">© 2569 SUPP Financial Consultant · Design System v1 (รออนุมัติ)</p>
+</div></footer>
+
+</body>
+</html>

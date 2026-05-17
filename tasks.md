@@ -13,7 +13,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 1 PRD — ✅ DONE
 - เฟส 2 Init (skills/repo/governance) — ✅ DONE
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
-- เฟส 4 Design — ⬜ TODO (เริ่มที่นี่ · 🔒 single agent)
+- เฟส 4 Design — 🔵 WIP (T4.1 ✅ · **T4.2 = 🚪 รอลูกค้า approve design-system**) · 🔒 single agent
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - เฟส 4 Design — ⬜ TODO
 - เฟส 5 Build — ⬜ TODO
@@ -37,8 +37,8 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
-| T4.1 | `design/design-system.md` (tokens) + **export เป็น HTML style guide** โชว์ color/type/spacing/component จริง (skill `ui-ux-pro-max`) | TODO | T3.3 | เปิด HTML ดูได้ มี palette, type scale, spacing, ปุ่ม/ฟอร์ม/การ์ด ตัวอย่าง |
-| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | GATE | T4.1 | ลูกค้ายืนยันลายเซ็น/ข้อความ approve — ห้ามข้าม |
+| T4.1 | `design/design-system.md` (tokens) + **export เป็น HTML style guide** | DONE | T3.3 | ✅ `design/design-system.md` + `design/design-system.html` (palette/type/spacing/ปุ่ม/ฟอร์ม/การ์ด/slot picker) |
+| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | GATE — รอลูกค้า | T4.1 | ⏸ ส่ง `design/design-system.html` ให้ลูกค้าเปิดดู → รอ approve ก่อนทำ T4.3 |
 | T4.3 | `design.md` + HTML prototype ทุกหน้า (skill `frontend-design`, ยึด design-system ที่ approve) | TODO | T4.2 | prototype ครบ 7 หน้า + blog list/detail + flow จองนัด |
 | T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | GATE | T4.3 | ลูกค้า approve — **gate เข้าเฟส 5** |
 
