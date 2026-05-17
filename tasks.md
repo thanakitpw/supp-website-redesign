@@ -13,7 +13,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 1 PRD — ✅ DONE
 - เฟส 2 Init (skills/repo/governance) — ✅ DONE
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
-- เฟส 4 Design — 🔵 WIP (T4.1 ✅ · **T4.2 = 🚪 รอลูกค้า approve design-system**) · 🔒 single agent
+- เฟส 4 Design — 🔵 WIP (T4.1✅ T4.2✅ T4.3✅ · **T4.4 = 🚪 รอลูกค้า approve prototype**) · 🔒 single agent
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - เฟส 4 Design — ⬜ TODO
 - เฟส 5 Build — ⬜ TODO
@@ -38,9 +38,9 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
 | T4.1 | `design/design-system.md` (tokens) + **export เป็น HTML style guide** | DONE | T3.3 | ✅ `design/design-system.md` + `design/design-system.html` (palette/type/spacing/ปุ่ม/ฟอร์ม/การ์ด/slot picker) |
-| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | GATE — รอลูกค้า | T4.1 | ⏸ **v2** (primary #AD1918 / text #1A1A1A / พื้นขาว ตาม feedback — ตรง CI เว็บเก่า). preview: `design/design-system-preview.png` + `design-system.html` → รอ approve |
-| T4.3 | `design.md` + HTML prototype ทุกหน้า (skill `frontend-design`, ยึด design-system ที่ approve) | TODO | T4.2 | prototype ครบ 7 หน้า + blog list/detail + flow จองนัด |
-| T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | GATE | T4.3 | ลูกค้า approve — **gate เข้าเฟส 5** |
+| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | DONE | T4.1 | ✅ ลูกค้า approve v2 (#AD1918/#1A1A1A/ขาว) |
+| T4.3 | HTML prototype ทุกหน้า (ยึด design-system v2) | DONE | T4.2 | ✅ `design/prototype/` 8 หน้า+index+css (home/about/services/blog/blog-post/contact/book/join) + screenshot |
+| T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | GATE — รอลูกค้า | T4.3 | ⏸ เปิด `design/prototype/index.html` → รอ approve — **gate เข้าเฟส 5** |
 
 ---
 
