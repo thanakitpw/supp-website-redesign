@@ -12,7 +12,9 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 ## Progress snapshot
 - เฟส 1 PRD — ✅ DONE
 - เฟส 2 Init (skills/repo/governance) — ✅ DONE
-- เฟส 3 Capture — ⬜ TODO (เริ่มที่นี่)
+- เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
+- เฟส 4 Design — ⬜ TODO (เริ่มที่นี่ · 🔒 single agent)
+- 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - เฟส 4 Design — ⬜ TODO
 - เฟส 5 Build — ⬜ TODO
 - เฟส 6–8 — ⬜ TODO
@@ -23,11 +25,11 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
-| T3.1 | Playwright capture 7 หน้า static + ทุก blog post (HTML + screenshot + assets) ลง `migration/raw/` | TODO | — | ทุก URL ใน sitemap เก่ามีไฟล์ capture; โลโก้/รูป asset ดึงครบ |
-| T3.2 | `migration/url-inventory.csv` — ทุก URL + title + meta desc + H1 + ประเภท(page/post) | TODO | T3.1 | ครบทุก URL; **เคลียร์ /about/ vs /about-supp/** ระบุตัวจริงในไฟล์ |
-| T3.3 | `design/brand-extract.md` — สี/ฟอนต์/โลโก้/spacing/โทน (skill `extract-design-system`) | TODO | T3.1 | มี hex สี, ชื่อ font, ขนาดโลโก้, สรุปโทนแบรนด์ |
-| T3.4 | `migration/tech-baseline.md` — Lighthouse + CWV WP เดิม (mobile+desktop) | TODO | — | มีตัวเลข LCP/CLS/INP/score เก็บไว้เทียบตอนส่งมอบ |
-| T3.5 | content gap list — รัน `bsc-seo-site-audit` ป้อนงาน rewrite | TODO | T3.1 | ลิสต์ปัญหา on-page/content ต่อหน้า จัด P0/P1/P2 |
+| T3.1 | Playwright capture 7 หน้า static + ทุก blog post (HTML + screenshot + assets) ลง `migration/raw/` | DONE | — | ✅ 45/45 ok 0 err; script `migration/capture.mjs`, manifest `raw/manifest.json` |
+| T3.2 | `migration/url-inventory.csv` — ทุก URL + title + meta desc + H1 + ประเภท(page/post) | DONE | T3.1 | ✅ 45 rows (35 post/7 page/3 archive); /about/→301→/about-supp/ ยืนยันแล้ว |
+| T3.3 | `design/brand-extract.md` — สี/ฟอนต์/โลโก้/spacing/โทน | DONE | T3.1 | ✅ palette #046BD2 + slate, Noto Sans Thai+DM Sans, โลโก้, โทน |
+| T3.4 | `migration/tech-baseline.md` — Lighthouse + CWV WP เดิม (mobile+desktop) | DONE | — | ✅ Lighthouse local; mobile perf 66–75, LCP 6.6–26.8s — เทียบเฟส 8 |
+| T3.5 | content gap list → ป้อนงาน rewrite | DONE | T3.1 | ✅ `migration/content-gap.md` P0/P1/P2 (meta 0/45, h1 6/45) |
 
 ---
 

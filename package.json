@@ -1,0 +1,23 @@
+{
+  "name": "supp-website-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanakitpw/supp-website-redesign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanakitpw/supp-website-redesign/issues"
+  },
+  "homepage": "https://github.com/thanakitpw/supp-website-redesign#readme",
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
