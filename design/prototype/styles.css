@@ -165,5 +165,20 @@ footer.ft a{color:#948D8C}footer.ft a:hover{color:#fff}
 .soc a span{width:38px;height:38px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:.74rem;font-family:var(--head);transition:.18s}
 .soc a:hover span{background:var(--brand);border-color:var(--brand);color:#fff}
 .fbar{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;font-size:.82rem;color:#6E6766;text-align:center;font-family:var(--head)}
+.ph,.media,.thumb,.tile .ph,.na .ph,.tquote .ph,.imgbg{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:880px){.team-grid{grid-template-columns:1fr 1fr}}
+.tm{background:var(--bg);border:1px solid var(--border);border-radius:var(--rc);overflow:hidden;transition:.28s cubic-bezier(.2,.7,.3,1)}
+.tm:hover{box-shadow:var(--sh);transform:translateY(-6px);border-color:transparent}
+.tm .ph{aspect-ratio:1/1;background:linear-gradient(135deg,#3a2422,#9a3a36)}
+.tm .b{padding:20px;text-align:center}.tm h3{font-size:1.02rem;margin-bottom:3px}.tm .role{font-size:.88rem;color:var(--brand);font-family:var(--head)}
+.prose{max-width:760px;margin:0 auto}.prose h2{font-size:1.5rem;font-weight:600;margin:36px 0 12px}.prose p{margin:14px 0;font-size:1.05rem}
+.prose blockquote{border-left:4px solid var(--brand);background:var(--surface);padding:18px 26px;border-radius:0 var(--ri) var(--ri) 0;margin:24px 0;font-size:1.12rem;color:var(--ink)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.chip{font-family:var(--head);font-size:.95rem;padding:9px 20px;border:1px solid var(--border);border-radius:var(--rp);background:var(--bg);color:var(--ink);cursor:pointer;transition:.2s}
+.chip:hover,.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.check li{list-style:none;padding:8px 0 8px 32px;position:relative}
+.check li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
+.x li:before{content:"✕";color:var(--muted)}
 .proto-bar{background:#000;color:#fff;font-size:.8rem;padding:7px 24px;text-align:center;font-family:var(--head)}
 .proto-bar a{color:#F2A8A8;margin:0 8px}
