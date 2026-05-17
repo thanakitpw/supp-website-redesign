@@ -1,0 +1,25 @@
+# secrets — NEVER commit (CLAUDE.md hard rule)
+.env
+.env.*
+!.env.example
+
+# deps / build
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# vendored skills (restore via: npx skills experimental_install)
+.claude/skills/
+
+# os / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# migration scratch (large captures) — keep csv/md, ignore raw dumps
+migration/raw/
+migration/_captures/
