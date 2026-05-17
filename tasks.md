@@ -38,7 +38,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
 | T4.1 | `design/design-system.md` (tokens) + **export เป็น HTML style guide** | DONE | T3.3 | ✅ `design/design-system.md` + `design/design-system.html` (palette/type/spacing/ปุ่ม/ฟอร์ม/การ์ด/slot picker) |
-| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | GATE — รอลูกค้า | T4.1 | ⏸ ส่ง `design/design-system.html` ให้ลูกค้าเปิดดู → รอ approve ก่อนทำ T4.3 |
+| T4.2 | 🚪 ลูกค้า approve **design-system HTML** | GATE — รอลูกค้า | T4.1 | ⏸ **v2** (primary #AD1918 / text #1A1A1A / พื้นขาว ตาม feedback — ตรง CI เว็บเก่า). preview: `design/design-system-preview.png` + `design-system.html` → รอ approve |
 | T4.3 | `design.md` + HTML prototype ทุกหน้า (skill `frontend-design`, ยึด design-system ที่ approve) | TODO | T4.2 | prototype ครบ 7 หน้า + blog list/detail + flow จองนัด |
 | T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | GATE | T4.3 | ลูกค้า approve — **gate เข้าเฟส 5** |
 
