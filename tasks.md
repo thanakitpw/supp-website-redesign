@@ -13,7 +13,9 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 1 PRD — ✅ DONE
 - เฟส 2 Init (skills/repo/governance) — ✅ DONE
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
-- เฟส 4 Design — 🔵 WIP (T4.1✅ T4.2✅ T4.3✅ · **T4.4 = 🚪 รอลูกค้า approve prototype**) · 🔒 single agent
+- เฟส 4 Design — ✅ DONE (provisional: ลูกค้าให้ไปต่อ, design ยังไม่ลงตัว 100% → polish ยกไป Lane A เฟส 5 ในระบบ v4)
+- เฟส 5 Build — 🔵 WIP (5.pre: T5.0a architecture กำลังทำ · 🔒 single ก่อนแตก team)
+- 📌 Design follow-up (Lane A): ลูกค้ายังไม่ชอบเต็มร้อย — เก็บ feedback เพิ่มเติม, ปรับใน v4 system (สี/spacing/รูป hero/วิดีโอ) ระหว่าง build
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - ✅ **Content dependency resolved**: ลูกค้าส่ง `assets/Website SUPP.docx` → extract เป็น `migration/content-spec.md` (SOURCE OF TRUTH rewrite เฟส 5). โลโก้จริง `assets/SUPP-Logo*.png`. หน้า prototype: home ใช้ copy จริงแล้ว; about/services/blog/join จะลง copy จริงตอนเฟส 5 Lane A (จาก content-spec.md)
 - 📌 Content findings: เว็บใหม่ = Home·About Us·Services·Blog·Join Us (+contact ใน footer); menu=หน้าแรก·เกี่ยวกับเรา·บริการ·บทความ(·ร่วมงานกับเรา); CTA หลัก="ขอคำปรึกษาเบื้องต้น", Join="ลงทะเบียน Open House"; มี testimonial จริง 3, social จริง (fb supp.th / ig supp_th / yt @supp_th / line B2kooV8)
@@ -42,7 +44,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 | T4.1 | `design/design-system.md` (tokens) + **export เป็น HTML style guide** | DONE | T3.3 | ✅ `design/design-system.md` + `design/design-system.html` (palette/type/spacing/ปุ่ม/ฟอร์ม/การ์ด/slot picker) |
 | T4.2 | 🚪 ลูกค้า approve **design-system HTML** | DONE | T4.1 | ✅ ลูกค้า approve v2 (#AD1918/#1A1A1A/ขาว) |
 | T4.3 | HTML prototype ทุกหน้า (ยึด design-system v2) | DONE | T4.2 | ✅ `design/prototype/` 8 หน้า+index+css (home/about/services/blog/blog-post/contact/book/join) + screenshot |
-| T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | GATE — รอลูกค้า | T4.3 | ⏸ เปิด `design/prototype/index.html` → รอ approve — **gate เข้าเฟส 5** |
+| T4.4 | 🚪 ลูกค้า approve **prototype หน้าเต็ม** | DONE (provisional) | T4.3 | ✅ ลูกค้าให้ไปต่อ — design polish ยกไป Lane A (ปรับใน v4) |
 
 ---
 
@@ -52,7 +54,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
-| T5.0a | เขียน architecture.md — DB schema (`articles` + booking/availability), redirect strategy, env layout | TODO | T4.4 | schema ครบ, ระบุตาราง/คอลัมน์, แผน 301 |
+| T5.0a | เขียน architecture.md — DB schema (`articles` + booking/availability), redirect strategy, env layout | DONE | T4.4 | ✅ `architecture.md` — routing/parity, Supabase schema (articles+booking RLS), โครงโปรเจค, SEO, Lane split |
 | T5.0b | **Foundation scaffold (single):** Next.js (App Router) + Tailwind จาก design tokens + layout/nav/footer + Supabase client (anon client / service server-only แยก) + `.env.local` + `.env.example` + deploy Vercel preview เปล่า | TODO | T5.0a | preview build ผ่าน, nav/footer ตรง design-system, ไม่มี key รั่ว client |
 | T5.0c | เปิด `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` → lead สร้าง team + เท Lane A/B/C ลง shared task list | TODO | T5.0b | team ขึ้น, 3 teammate เห็น task ของตัวเอง |
 
