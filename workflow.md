@@ -23,7 +23,7 @@ Redesign เว็บ **SUPP — Financial Consultant** (yourgoalswesupp.com) �
 ### 2. Initial
 - ✅ ติดตั้ง skill จาก skills.sh **project-level** (`.claude/skills/`) — 9 ตัว: `ui-ux-pro-max`, `frontend-design`, `extract-design-system`, `next-best-practices`, `vercel-react-best-practices`, `supabase`, `supabase-postgres-best-practices`, `schema`, `webapp-testing`. local ใช้เฉพาะ `bsc-seo-site-audit`/`seo-blog-publisher`/`seo-blog-writer`
 - ✅ Governance = **`CLAUDE.md` single source** (rules + context + convention). **ข้าม `rules.md` + `agents.md` แยก** (ซ้ำ). `AGENTS.md` ทำตอนส่งมอบแบบ symlink (optional)
-- ◻️ สร้าง/เชื่อม GitHub repo: `https://github.com/thanakitpw/supp-website-redesign.git`
+- ✅ GitHub repo เชื่อม + push แล้ว: `https://github.com/thanakitpw/supp-website-redesign` (PUBLIC, main) — committed: prd/workflow/CLAUDE/.gitignore/skills-lock
 - Hard rules อยู่ใน `CLAUDE.md`: URL parity / blog 301 / SEO foundation / Supabase secret server-only / CI-brand / content
 
 ### 3. เก็บข้อมูลเว็บเก่า + Asset/CI extraction
@@ -33,20 +33,22 @@ Redesign เว็บ **SUPP — Financial Consultant** (yourgoalswesupp.com) �
 - `migration/tech-baseline.md` — CWV/Lighthouse เว็บเก่า เก็บเทียบ improvement ตอนส่งมอบ
 - ใช้ skill `bsc-seo-site-audit` หา content gap / on-page ที่ rewrite ควรแก้
 
-### 4. ดีไซน์ใหม่
+### 4. ดีไซน์ใหม่ — 🔒 SINGLE AGENT (ห้ามแตก team)
 - `design/design-system.md` (tokens สี/type/spacing) — input จาก `brand-extract.md` (CI เดิม + modernize)
 - `design.md` → HTML prototype → ลูกค้าตรวจ
+- **กฎ:** เฟสนี้ session/agent เดียวคุมทั้งหมด เพื่อ design coherent ไม่ปนกันมั่ว
 
-### 5. ออกแบบระบบ + Production
+### 5. ออกแบบระบบ + Production — 👥 AGENT TEAM
 - `architecture.md` — DB schema (Supabase `articles` + ระบบจองนัด); redirect strategy
-- `tasks.md` — แตกงาน: URL parity check, SEO foundation, ระบบจองนัด, a11y
-- AI build ทีละ task → HTML→Next.js, blog ลง Supabase (rewritten)
+- `tasks.md` — แตกงานตาม module ที่ไม่ทับกัน → แบ่งให้ teammates
+- Team 3 สาย (อิสระต่อกัน): **A** marketing pages FE · **B** ระบบจองนัด FE+BE+DB · **C** blog migration→Supabase + SEO foundation
 - `migration/redirect-map.csv` — 301 blog slug เดิม→ใหม่ ทุกตัว → middleware/next.config
 - SEO foundation: metadata, canonical, OG, JSON-LD, sitemap.xml, robots.txt
 - Test (CWV / a11y) → Deploy Vercel preview
+- ต้องเปิด `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` ก่อนเริ่มเฟสนี้
 
-### 6. Pre-cutover gate
-- `skills.md` review checklist
+### 6. Pre-cutover gate — 👥 PARALLEL-REVIEW TEAM
+- review team แยก lens: URL parity / CWV / a11y / SEO foundation → lead รวมผล
 - ลูกค้า approve preview
 - **URL parity audit**: ทุก URL ใน `url-inventory.csv` → เว็บใหม่ตอบ 200 หรือ 301 ตามตั้งใจ (gate หลัก)
 - ตรวจ robots/sitemap/CWV

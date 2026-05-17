@@ -2,6 +2,8 @@
 
 Project guidance for Claude Code. อ่าน `prd.md` + `workflow.md` ก่อนเริ่มงานทุกครั้ง.
 
+> ⚠️ **เริ่มทุก session ต้องเปิด `tasks.md` ก่อนเสมอ** — ดู Progress snapshot + Status เพื่อรู้ว่าค้าง task ไหน, ทำตาม `Depends-on`, และ **อัปเดต Status (`TODO→WIP→DONE`) ทุกครั้งที่เริ่ม/จบ task**. ห้ามเริ่มงานโดยไม่เช็ค tasks.md.
+
 ## โปรเจคนี้คืออะไร
 
 Redesign เว็บ **SUPP — Financial Consultant** (yourgoalswesupp.com, WordPress เดิม) → **Next.js + Vercel** custom code. เว็บเก่าไม่เคยทำ SEO → เป็น **SEO-foundation build** ไม่ใช่ SEO-rescue. ทำตาม workflow 8 เฟสใน `workflow.md` (ตอนนี้: เฟส 1 เสร็จ, ถัดไปเฟส 2 Init).
