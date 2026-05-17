@@ -22,7 +22,7 @@
 | `--brand-soft` | `#FBEAEA` | พื้น highlight อ่อน/badge |
 | `--ink` | `#1A1A1A` | หัวข้อ + ข้อความหลัก |
 | `--body` | `#1A1A1A` | เนื้อความ |
-| `--muted` | `#6B6B6B` | caption/secondary |
+| `--muted` | `#4A4A4A` | caption/secondary (เข้มขึ้นจาก feedback — ไม่จาง) |
 | `--border` | `#EAEAEA` | เส้นขอบ/divider |
 | `--surface` | `#FAFAFA` | section สลับพื้น (เทาอ่อนมาก) |
 | `--bg` | `#FFFFFF` | พื้นหลัก (ขาวล้วน) |
