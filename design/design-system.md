@@ -1,4 +1,7 @@
-# Design System — SUPP (v2, รออนุมัติลูกค้า)
+# Design System — SUPP (v3, รออนุมัติลูกค้า)
+
+> v3: ปรับ layout language ตาม reference **Financity** (goodlayers) ตาม feedback ลูกค้า — hero ภาพเข้ม+headline หนา, watermark label หลังหัวข้อ, stats band, numbered card, split+offset frame, testimonial เส้นแดงบน, footer 4 คอลัมน์. Token สี (#AD1918/#1A1A1A/ขาว) คงเดิม. Font: **Montserrat** (หัวข้อ/Latin) + **Noto Sans Thai** (เนื้อหา). ตัวอย่างจริง = `design/prototype/home.html`
+
 
 > T4.1 · input: `design/brand-extract.md` + feedback ลูกค้า (v2: primary แดง, text เข้ม, พื้นขาว)
 > Preview จริง: เปิด `design/design-system.html` / ดู `design/design-system-preview*.png` → 🚪 T4.2 ลูกค้า approve
