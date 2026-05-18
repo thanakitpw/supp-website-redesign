@@ -14,14 +14,13 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 2 Init (skills/repo/governance) — ✅ DONE
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
 - เฟส 4 Design — ✅ DONE (provisional: ลูกค้าให้ไปต่อ, design ยังไม่ลงตัว 100% → polish ยกไป Lane A เฟส 5 ในระบบ v4)
-- เฟส 5 Build — 🔵 WIP (5.pre: T5.0a architecture กำลังทำ · 🔒 single ก่อนแตก team)
+- เฟส 5 Build — 🔵 WIP · **NEXT = T5.0b foundation scaffold** (T5.0a architecture ✅ DONE) · 🔒 single ก่อนแตก team
+  - ⚠️ BLOCKER T5.0b: ต้องใช้ Supabase project ref + service role key (ยังไม่ได้รับ). ทำ Next.js/Tailwind/layout ก่อนได้ แต่ส่วน Supabase ค้างรอ creds
 - 📌 Design follow-up (Lane A): ลูกค้ายังไม่ชอบเต็มร้อย — เก็บ feedback เพิ่มเติม, ปรับใน v4 system (สี/spacing/รูป hero/วิดีโอ) ระหว่าง build
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - ✅ **Content dependency resolved**: ลูกค้าส่ง `assets/Website SUPP.docx` → extract เป็น `migration/content-spec.md` (SOURCE OF TRUTH rewrite เฟส 5). โลโก้จริง `assets/SUPP-Logo*.png`. หน้า prototype: home ใช้ copy จริงแล้ว; about/services/blog/join จะลง copy จริงตอนเฟส 5 Lane A (จาก content-spec.md)
 - 📌 Content findings: เว็บใหม่ = Home·About Us·Services·Blog·Join Us (+contact ใน footer); menu=หน้าแรก·เกี่ยวกับเรา·บริการ·บทความ(·ร่วมงานกับเรา); CTA หลัก="ขอคำปรึกษาเบื้องต้น", Join="ลงทะเบียน Open House"; มี testimonial จริง 3, social จริง (fb supp.th / ig supp_th / yt @supp_th / line B2kooV8)
-- เฟส 4 Design — ⬜ TODO
-- เฟส 5 Build — ⬜ TODO
-- เฟส 6–8 — ⬜ TODO
+- เฟส 6–8 — ⬜ TODO (pre-cutover / cutover / post-launch)
 
 ---
 
