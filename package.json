@@ -1,23 +1,33 @@
 {
   "name": "supp-website-redesign",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": true,
+  "description": "SUPP — Financial Consultant website redesign (Next.js App Router)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thanakitpw/supp-website-redesign.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/thanakitpw/supp-website-redesign#readme",
   "bugs": {
     "url": "https://github.com/thanakitpw/supp-website-redesign/issues"
   },
-  "homepage": "https://github.com/thanakitpw/supp-website-redesign#readme",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "capture": "node migration/capture.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
   "devDependencies": {
-    "playwright": "^1.60.0"
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "playwright": "^1.60.0",
+    "typescript": "^5.7.2"
   }
 }

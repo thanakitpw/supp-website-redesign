@@ -10,6 +10,7 @@ out/
 dist/
 build/
 *.tsbuildinfo
+next-env.d.ts
 
 # vendored skills (restore via: npx skills experimental_install)
 .claude/skills/
@@ -23,3 +24,6 @@ build/
 # migration scratch (large captures) — keep csv/md, ignore raw dumps
 migration/raw/
 migration/_captures/
+
+# scratch
+.tmp/
