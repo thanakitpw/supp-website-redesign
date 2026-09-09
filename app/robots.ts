@@ -2,6 +2,12 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
+  // While the site sits on the Vercel review domain, keep crawlers out entirely
+  // so it cannot compete with the client's live site in search.
+  if (!site.indexable) {
+    return { rules: [{ userAgent: "*", disallow: "/" }] };
+  }
+
   return {
     rules: [
       { userAgent: "*", allow: "/" },
