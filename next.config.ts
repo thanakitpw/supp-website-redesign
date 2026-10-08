@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   // Pin the trace root so a lockfile higher up the tree is not picked instead.
   outputFileTracingRoot: __dirname,
   images: {
-    // Static export-friendly formats; all art is served from /public.
-    formats: ["image/avif", "image/webp"],
+    // Served as-is: every file in /public/images is already a sized WebP/PNG,
+    // and the Vercel account's image-optimization quota is used up (402).
+    unoptimized: true,
   },
   poweredByHeader: false,
   async headers() {
