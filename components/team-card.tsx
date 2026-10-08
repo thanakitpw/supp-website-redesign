@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { AdvisorDialog } from "@/components/advisor-dialog";
 import { ArrowLeft, ArrowUpRight } from "@/components/icons";
@@ -15,25 +16,26 @@ export function TeamCard({ member }: { member: TeamMember }) {
 
   const { portrait } = member;
   const profileId = `profile-${member.slug}`;
-  const hasName = Boolean(member.firstName);
 
   return (
     <article className={`team-card team-flip-card ${flipped ? "is-flipped" : ""}`}>
       <div className="team-flip-inner">
-        <div className="team-face team-front" aria-hidden={flipped}>
+        {/* The whole face is a mouse/touch target; the toggle button below is
+            the keyboard path, so the face itself stays out of tab order. */}
+        <div
+          className="team-face team-front"
+          aria-hidden={flipped}
+          onClick={() => setFlipped(true)}
+        >
           <div className="team-portrait">
             {portrait.kind === "photo" ? (
-              // eslint-disable-next-line @next/next/no-img-element -- sprite offsets rely on raw % sizing
-              <img
+              <Image
                 className={portrait.className}
                 src={portrait.src}
                 alt={portrait.alt}
-                loading="lazy"
-                style={
-                  portrait.left !== undefined
-                    ? { left: `${portrait.left}%` }
-                    : undefined
-                }
+                width={660}
+                height={950}
+                sizes="(max-width: 700px) 45vw, (max-width: 1050px) 30vw, 20vw"
               />
             ) : null}
             {portrait.kind === "placeholder" ? (
@@ -45,26 +47,16 @@ export function TeamCard({ member }: { member: TeamMember }) {
           </div>
           <div className="team-details">
             <h3>
-              {hasName ? (
-                <>
-                  {member.firstName}
-                  <br />
-                  {member.lastName}
-                </>
-              ) : (
-                <>
-                  <span aria-hidden="true">&nbsp;</span>
-                  <br />
-                  <span aria-hidden="true">&nbsp;</span>
-                </>
-              )}
+              {member.firstName}
+              <br />
+              {member.lastName}
             </h3>
             <button
               className="team-profile-toggle"
               type="button"
               aria-expanded={flipped}
               aria-controls={profileId}
-              aria-label={`ดูประวัติและความเชี่ยวชาญของ ${member.firstName || member.slug}`}
+              aria-label={`ดูประวัติและความเชี่ยวชาญของ ${member.firstName}`}
               onClick={() => setFlipped(true)}
             >
               <span>
@@ -84,9 +76,9 @@ export function TeamCard({ member }: { member: TeamMember }) {
         >
           <span className="team-profile-label">{member.profileLabel}</span>
           <h3>
-            {member.firstName || "[ชื่อ]"}
+            {member.firstName}
             <br />
-            {member.lastName || "[นามสกุล]"}
+            {member.lastName}
           </h3>
           <p className="team-back-role">{member.backRole}</p>
 
@@ -106,7 +98,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
             </p>
           </div>
           <div className="team-bio-section team-summary-qualifications">
-            <h4>คุณวุฒิและสมาชิกสมาคม</h4>
+            <h4>{member.qualificationsHeading ?? "คุณวุฒิและสมาชิกสมาคม"}</h4>
             <p>{member.summaryQualifications}</p>
           </div>
 

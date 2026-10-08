@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, Noto_Sans_Thai } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
+import "./motion.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin", "latin-ext"],

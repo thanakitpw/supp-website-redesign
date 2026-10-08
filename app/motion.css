@@ -1,0 +1,352 @@
+/* ==========================================================================
+   SUPP — Motion layer
+   Sits on top of the approved design in globals.css and only changes how
+   things arrive and how they answer a pointer. No layout, colour or type
+   decision is made here.
+
+   Above-the-fold entrances are plain CSS animations so they run on the first
+   paint. Everything below the fold is revealed by components/motion.tsx,
+   which never touches an element that is already on screen — so nothing ever
+   flashes in and back out during hydration.
+
+   The reduced-motion block in globals.css already kills every transition and
+   animation site-wide; each rule here is written so the resting state is the
+   finished state.
+   ========================================================================== */
+
+:root {
+  --ease-soft: cubic-bezier(.22, 1, .36, 1);
+  --ease-out: cubic-bezier(.16, .84, .44, 1);
+  --reveal-step: 70ms;
+}
+
+@keyframes supp-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes supp-rise-sm {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes supp-in-right {
+  from { opacity: 0; transform: translateX(34px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Photos settle instead of fading: they are the LCP element on most pages and
+   an opacity fade would hold the paint back. */
+@keyframes supp-settle {
+  from { transform: scale(1.07); }
+  to { transform: scale(1); }
+}
+
+@keyframes supp-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==========================================================================
+   1. Above the fold — first paint
+   ========================================================================== */
+
+.hero-copy > *,
+.page-heading:not(.join-hero) > *,
+.join-hero-copy > * {
+  animation: supp-rise .85s var(--ease-soft) both;
+}
+
+:is(.hero-copy, .page-heading:not(.join-hero), .join-hero-copy) > :nth-child(1) {
+  animation-delay: 60ms;
+}
+
+:is(.hero-copy, .page-heading:not(.join-hero), .join-hero-copy) > :nth-child(2) {
+  animation-delay: 140ms;
+}
+
+:is(.hero-copy, .page-heading:not(.join-hero), .join-hero-copy) > :nth-child(3) {
+  animation-delay: 220ms;
+}
+
+:is(.hero-copy, .page-heading:not(.join-hero), .join-hero-copy) > :nth-child(4) {
+  animation-delay: 300ms;
+}
+
+:is(.hero-copy, .page-heading:not(.join-hero), .join-hero-copy) > :nth-child(n + 5) {
+  animation-delay: 380ms;
+}
+
+.hero-photo,
+.about-photo > img,
+.join-hero-photo > img {
+  animation: supp-settle 1.6s var(--ease-soft) both;
+}
+
+.hero-red {
+  animation: supp-in-right .8s var(--ease-soft) 300ms both;
+}
+
+.hero-caption,
+.about-photo > div,
+.join-photo-caption {
+  animation: supp-rise .8s var(--ease-soft) 450ms both;
+}
+
+/* ==========================================================================
+   2. Scroll reveal — driven by components/motion.tsx
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  will-change: opacity, transform;
+}
+
+/* `backwards` holds the start frame through the stagger delay and then lets
+   go, so hover transforms further down this file stay free to move. */
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+  animation: supp-rise .8s var(--ease-soft) calc(var(--reveal-i, 0) * var(--reveal-step)) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   3. Pointer feedback
+   Hover-only rules are gated on a real pointer so a tap never leaves a card
+   stuck in its hover state.
+   ========================================================================== */
+
+.button {
+  transition: background .25s ease, color .25s ease, border-color .25s ease,
+    transform .25s var(--ease-out);
+}
+
+.button:active {
+  transform: translateY(0) scale(.99);
+}
+
+.button svg,
+.text-link svg,
+.value h3 svg,
+.service-title svg,
+.detail-arrow,
+.footer-wordmark svg,
+.contact-channel > svg:last-child {
+  transition: transform .35s var(--ease-out);
+}
+
+.text-link,
+.header nav a,
+.service-title h3,
+.contact-channel {
+  transition: color .25s ease;
+}
+
+.value,
+.audience-list article,
+.join-role-grid article,
+.join-belief-list article,
+.join-growth-grid article,
+.join-steps li,
+.contact-channel,
+.process-grid li > span {
+  position: relative;
+}
+
+/* The design ends these blocks on a hairline. Hover draws it in red from the
+   left rather than swapping the colour outright. */
+.value::before,
+.audience-list article::before,
+.join-role-grid article::before,
+.join-belief-list article::before,
+.join-growth-grid article::before,
+.join-steps li::before,
+.contact-channel::before,
+.process-grid li > span::before {
+  content: "";
+  background: var(--red);
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .45s var(--ease-out);
+  position: absolute;
+  inset: -1px 0 auto;
+}
+
+.value,
+.audience-list article,
+.join-role-grid article,
+.join-belief-list article,
+.join-growth-grid article,
+.join-steps li,
+.price-card,
+.service-card,
+.article-grid > *,
+.join-fit-grid article {
+  transition: transform .4s var(--ease-out), border-color .35s ease;
+}
+
+.service-image img,
+.detail-image img,
+.article-image img {
+  transition: transform .7s var(--ease-out);
+}
+
+.image-number,
+.field input,
+.field textarea,
+.field select {
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.footer-top a {
+  transition: color .25s ease, transform .25s var(--ease-out);
+}
+
+.logo {
+  transition: opacity .3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header a:hover .logo {
+    opacity: .78;
+  }
+
+  /* Grows the same 18px rule the current page already carries. */
+  .header nav a::after {
+    content: "";
+    background: var(--red);
+    width: 18px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .3s var(--ease-out);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+
+  .header nav a:hover::after,
+  .header nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  /* globals.css re-seats the active marker on narrow screens; the hover one
+     has to sit on the same line. */
+  @media (max-width: 700px) {
+    .header nav a::after {
+      bottom: 0;
+    }
+  }
+
+  .button:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  .button.light:hover {
+    background: #fff;
+    border-color: #fff;
+  }
+
+  .text-link:hover svg {
+    transform: translateX(5px);
+  }
+
+  .value:hover,
+  .audience-list article:hover,
+  .join-role-grid article:hover,
+  .join-belief-list article:hover,
+  .join-growth-grid article:hover,
+  .join-steps li:hover {
+    transform: translateY(-4px);
+  }
+
+  .value:hover::before,
+  .audience-list article:hover::before,
+  .join-role-grid article:hover::before,
+  .join-belief-list article:hover::before,
+  .join-growth-grid article:hover::before,
+  .join-steps li:hover::before,
+  .contact-channel:hover::before,
+  .process-grid li:hover > span::before {
+    transform: scaleX(1);
+  }
+
+  .value:hover h3 svg {
+    transform: translate(4px, -4px);
+  }
+
+  .service-card:hover,
+  .article-grid > :hover {
+    transform: translateY(-6px);
+  }
+
+  .service-card:hover img,
+  .article-grid > :hover .article-image img,
+  .service-detail:hover .detail-image img {
+    transform: scale(1.06);
+  }
+
+  .service-card:hover .image-number {
+    background: var(--red);
+    color: #fff;
+  }
+
+  .service-card:hover .service-title h3 {
+    color: var(--red);
+  }
+
+  .service-card:hover .service-title svg,
+  .service-detail:hover .detail-arrow {
+    transform: translate(4px, -4px);
+  }
+
+  .price-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--red);
+  }
+
+  .join-fit-grid article:hover {
+    transform: translateY(-4px);
+  }
+
+  .contact-channel:hover > svg:last-child {
+    transform: translateX(4px);
+  }
+
+  .footer-top a:hover {
+    transform: translateX(3px);
+  }
+
+  .footer-wordmark:hover svg {
+    transform: translate(6px, -6px);
+  }
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  background: #fff;
+  border-color: var(--red);
+}
+
+/* ==========================================================================
+   4. Advisor dialog
+   ========================================================================== */
+
+.advisor-dialog[open] {
+  animation: supp-rise-sm .35s var(--ease-out);
+}
+
+.advisor-dialog[open]::backdrop {
+  animation: supp-fade .35s ease;
+}
