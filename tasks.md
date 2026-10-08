@@ -15,11 +15,19 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 3 Capture — ✅ DONE (T3.1–T3.5)
 - เฟส 4 Design — ✅ DONE (provisional: ลูกค้าให้ไปต่อ, design ยังไม่ลงตัว 100% → polish ยกไป Lane A เฟส 5 ในระบบ v4)
 - เฟส 5 Build — 🔵 WIP · **NEXT = T5.0b foundation scaffold** (T5.0a architecture ✅ DONE) · 🔒 single ก่อนแตก team
-  - ⚠️ BLOCKER T5.0b: ต้องใช้ Supabase project ref + service role key (ยังไม่ได้รับ). ทำ Next.js/Tailwind/layout ก่อนได้ แต่ส่วน Supabase ค้างรอ creds
+  - ✅ Supabase เชื่อมแล้ว (2026-10-06): project ref `czqlzbjhkuiaqdowrwzf`, publishable key ใน `.env.local`, client `lib/supabase/{server,client}.ts`, Supabase MCP ใน `.mcp.json`. ยังไม่มีตาราง `articles` (สร้างตาม architecture.md §3.1). service role key ยังไม่ได้รับ — ใช้เมื่อต้องเขียนข้อมูลฝั่ง server เท่านั้น
+  - 📥 ลูกค้าส่งบทความใหม่ 6 บท (Google Doc "Blogs") — ไม่มีรูปในไฟล์, รอยืนยัน slug/หมวด ก่อน upsert
+- ✅ **Motion layer**: `app/motion.css` + `components/motion.tsx` — hero/page-heading เข้าตอน first paint, ส่วนที่อยู่ใต้ fold reveal ตอน scroll (IntersectionObserver), hover/focus micro-interaction ทุกการ์ด. ไม่แตะ markup/สี/layout เดิม, SSR html เหมือนเดิม, ปิดเองเมื่อ `prefers-reduced-motion`
+- ✅ **About / ที่ปรึกษา**: ดึงข้อมูล popup ที่ปรึกษาจากเว็บเก่า (`yourgoalswesupp.com/about-supp/`) เข้า `lib/team.ts` ครบ 12 คน (การศึกษา · work experience · ใบอนุญาต/คุณวุฒิ ครบทุกเลขที่) + รูปจริง 11 คน crop เป็น 660×950 ที่ `public/images/team/` (Sahathon เว็บเก่ามีแค่ silhouette → ใช้การ์ดตัวอักษร). Ratchakorn เก็บเป็น stub ตาม design ที่อนุมัติ (ไม่มีในเว็บเก่า) → รวม 13 การ์ด
+  - ⏳ รอลูกค้าเติม: ชื่อไทย/ชื่อเล่น, quote, "กลุ่มลูกค้าหลักที่ดูแล", ความเชี่ยวชาญของบางคน, ข้อมูล Ratchakorn ทั้งหมด, รูป Sahathon (ทุกช่องมาร์กเป็น `[...]` ใน `lib/team.ts` แล้ว)
+  - ℹ️ ตำแหน่งใช้ตาม design ที่อนุมัติ (Founder / Co-Founder / Financial Life Partner) ไม่ใช่ตำแหน่งเว็บเก่า (Team Leader / Senior Consultant / Financial Consultant)
 - 📌 Design follow-up (Lane A): ลูกค้ายังไม่ชอบเต็มร้อย — เก็บ feedback เพิ่มเติม, ปรับใน v4 system (สี/spacing/รูป hero/วิดีโอ) ระหว่าง build
 - 📌 Findings (→ T3.5/rewrite & SEO foundation): 39/45 หน้า **ไม่มี `<h1>`**; **ทุกหน้าไม่มี meta description**; `/about/` →301→ `/about-supp/` (canonical = /about-supp/, ต้องคง 301 บนเว็บใหม่)
 - ✅ **Content dependency resolved**: ลูกค้าส่ง `assets/Website SUPP.docx` → extract เป็น `migration/content-spec.md` (SOURCE OF TRUTH rewrite เฟส 5). โลโก้จริง `assets/SUPP-Logo*.png`. หน้า prototype: home ใช้ copy จริงแล้ว; about/services/blog/join จะลง copy จริงตอนเฟส 5 Lane A (จาก content-spec.md)
 - 📌 Content findings: เว็บใหม่ = Home·About Us·Services·Blog·Join Us (+contact ใน footer); menu=หน้าแรก·เกี่ยวกับเรา·บริการ·บทความ(·ร่วมงานกับเรา); CTA หลัก="ขอคำปรึกษาเบื้องต้น", Join="ลงทะเบียน Open House"; มี testimonial จริง 3, social จริง (fb supp.th / ig supp_th / yt @supp_th / line B2kooV8)
+- 🔍 **SEO program (`seo-program-prompt.md`)** — เฟส 1 Research ✅ DONE (2026-10-08): แผน + checklist 63 ข้อ ที่ https://claude.ai/artifact/KcZ1919r3T89kntPbe4L4t · ⏳ รอผู้ใช้ตัดสินใจ voice / ทางขึ้นบทความ / กฎ commit ก่อนเริ่มเฟส 2 (VOICE-GUIDE + บทที่ 1)
+  - เฟส 5 (หน้าให้ลูกค้าดู) ✅ build ผ่าน, ยังไม่ deploy: `/reports/seo-keywords` (noindex, ไม่อยู่ใน sitemap, ไม่มี header/footer/LINE) อ่าน keyword บทความจาก frontmatter `content/articles/NN-slug.md` (12 ไฟล์ = แผน ยังไม่มีเนื้อหา) + keyword หน้าใน `lib/keyword-plan.ts` · หน้า marketing ย้ายเข้า route group `app/(site)/` (path เดิมไม่เปลี่ยน)
+  - P0 ที่เจอ: path `/about` `/join-us` ไม่ตรง parity (`/about-supp/` `/join-supp/` `/book-a-free-consult/` → 404 บน preview, ไม่มี trailingSlash) · 35 บทเดิมยังไม่ย้าย + ไม่มี redirect-map · ไม่มี GA4/GSC · ฟอร์มเป็น mailto
 - เฟส 6–8 — ⬜ TODO (pre-cutover / cutover / post-launch)
 
 ---
