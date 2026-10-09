@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Services — บริการและแพ็กเกจ",
   description:
-    "วางแผนเรื่องเงินให้ตอบโจทย์ชีวิตคุณ ครอบคลุม Planning, Protection, Wealth Building และ Ongoing Support พร้อมแพ็กเกจเริ่มต้น 4,900 บาท",
+    "วางแผนเรื่องเงินให้ตอบโจทย์ชีวิตคุณ ครอบคลุม Planning, Protection, Wealth Building และ Ongoing Support พร้อมแพ็กเกจเริ่มต้น 5,900 บาท",
   path: "/services",
   image: "/images/planning.webp",
 });

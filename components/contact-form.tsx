@@ -7,9 +7,9 @@ import { site } from "@/lib/site";
 
 const PLAN_LABELS = {
   undecided: "ยังไม่แน่ใจ อยากคุยกับทีมก่อน",
-  single: "Single Plan — 4,900 บาท",
-  comprehensive: "Comprehensive Planning — 14,900 บาท",
-  ongoing: "Ongoing Support — 8,900 บาท/ปี",
+  single: "Single Plan — 5,900 บาท",
+  comprehensive: "Comprehensive Planning — 19,900 บาท",
+  ongoing: "Ongoing Support — 9,900 บาท/ปี",
 } as const;
 
 type PlanKey = keyof typeof PLAN_LABELS;
