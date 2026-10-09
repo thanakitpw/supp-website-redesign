@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CtaSection } from "@/components/cta-section";
-import { ArrowUpRight } from "@/components/icons";
+import { SuppMark } from "@/components/icons";
 import { TeamCard } from "@/components/team-card";
 import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 <span>{item.number}</span>
                 <h3>
                   {item.title}
-                  <ArrowUpRight />
+                  <SuppMark />
                 </h3>
                 <h4>{item.lead}</h4>
                 <p>{item.text}</p>

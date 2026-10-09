@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { ContactForm } from "@/components/contact-form";
-import { ArrowUpRight, Mail, MapPin, Phone } from "@/components/icons";
+import { Mail, MapPin, Phone, SuppMark } from "@/components/icons";
 import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <span>โทรศัพท์</span>
                 <strong>{site.phone}</strong>
               </div>
-              <ArrowUpRight />
+              <SuppMark />
             </a>
 
             <a className="contact-channel" href={`mailto:${site.email}`}>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                 <span>อีเมล</span>
                 <strong>{site.email}</strong>
               </div>
-              <ArrowUpRight />
+              <SuppMark />
             </a>
 
             <div className="contact-address">
@@ -110,7 +110,7 @@ export default function ContactPage() {
               <span>YOUR GOALS.</span>
               <strong>
                 WE SUPP.
-                <ArrowUpRight size={42} />
+                <SuppMark size={42} />
               </strong>
             </div>
           </aside>

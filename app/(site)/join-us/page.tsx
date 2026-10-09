@@ -7,6 +7,7 @@ import {
   HeartHandshake,
   ListChecks,
   MessageCircle,
+  SuppMark,
 } from "@/components/icons";
 import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -233,7 +234,7 @@ export default function JoinUsPage() {
                 <br />
                 ไปด้วยกัน
               </p>
-              <ArrowUpRight />
+              <SuppMark />
             </div>
           </div>
         </section>
@@ -241,7 +242,7 @@ export default function JoinUsPage() {
         <section className="principles-strip">
           <span>A CAREER WITH PURPOSE</span>
           <p>
-            เข้าใจผู้คน <b>↗</b> พัฒนาตัวเอง <b>↗</b> เติบโตไปด้วยกัน
+            เข้าใจผู้คน <SuppMark /> พัฒนาตัวเอง <SuppMark /> เติบโตไปด้วยกัน
           </p>
         </section>
 
@@ -345,7 +346,7 @@ export default function JoinUsPage() {
             </article>
           </div>
           <div className="join-learning-note">
-            <ArrowUpRight size={30} />
+            <SuppMark size={30} />
             <p>
               <strong>ไม่จำเป็นต้องเก่งการเงินมาก่อน</strong>
               <br />

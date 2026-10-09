@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
-import { ArrowRight, ArrowUpRight } from "@/components/icons";
+import { ArrowRight, ArrowUpRight, SuppMark } from "@/components/icons";
 import { services } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
@@ -85,7 +85,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="hero-note">
-            <span className="tiny-arrow">↗</span>
+            <SuppMark className="tiny-arrow" size={26} />
             <span>YOUR LIFE. YOUR GOALS. OUR SUPPort.</span>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
               <br />
               SUPPort.
             </span>
-            <ArrowUpRight strokeWidth={1} />
+            <SuppMark />
           </div>
         </div>
       </section>
@@ -122,7 +122,7 @@ export default function HomePage() {
       <section className="principles-strip">
         <span>YOUR GOALS, OUR STARTING POINT</span>
         <p>
-          เข้าใจชีวิต <b>↗</b> เห็นทางเลือก <b>↗</b> ก้าวไปด้วยกัน
+          เข้าใจชีวิต <SuppMark /> เห็นทางเลือก <SuppMark /> ก้าวไปด้วยกัน
         </p>
       </section>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
               <span>{value.number}</span>
               <h3>
                 {value.title}
-                <ArrowUpRight />
+                <SuppMark />
               </h3>
               <h4>{value.lead}</h4>
               <p>{value.text}</p>
@@ -197,7 +197,7 @@ export default function HomePage() {
               </div>
               <div className="service-title">
                 <h3>{service.title}</h3>
-                <ArrowUpRight />
+                <SuppMark />
               </div>
               <h4>{service.lead}</h4>
               <p>{service.summary}</p>

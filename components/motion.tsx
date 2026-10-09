@@ -56,7 +56,10 @@ export function Motion() {
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("is-in");
+          // An attribute, not a class: React rewrites `className` whenever a
+          // component re-renders (e.g. a team card flipping), which would drop
+          // a class added here and snap the element back to hidden.
+          (entry.target as HTMLElement).dataset.reveal = "in";
           observer.unobserve(entry.target);
         }
       },
@@ -72,7 +75,7 @@ export function Motion() {
         // The footer outlives a client-side navigation, so anything already
         // marked but not yet revealed needs picking back up.
         if (element.dataset.reveal !== undefined) {
-          if (!element.classList.contains("is-in")) observer.observe(element);
+          if (element.dataset.reveal !== "in") observer.observe(element);
           continue;
         }
         if (opening?.contains(element)) continue;

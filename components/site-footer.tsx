@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "@/components/icons";
+import { SuppMark } from "@/components/icons";
 import { nav, site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -42,7 +42,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-wordmark">
         YOUR GOALS. WE SUPP.
-        <ArrowUpRight />
+        <SuppMark />
       </div>
       <div className="footer-bottom">
         <span>© 2026 SUPP FUTURE SOLUTIONS CO., LTD.</span>

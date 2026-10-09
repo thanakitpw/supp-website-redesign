@@ -64,10 +64,6 @@ export const metadata: Metadata = {
         },
       }
     : { index: false, follow: false, nocache: true },
-  icons: {
-    icon: "/images/logo-red.png",
-    apple: "/images/logo-red.png",
-  },
   formatDetection: { telephone: false },
 };
 

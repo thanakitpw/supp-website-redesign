@@ -95,7 +95,8 @@ h3 {
   align-items: center;
   gap: 24px;
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -243,7 +244,7 @@ h3 {
 
 .tiny-arrow {
   color: var(--red);
-  font-size: 26px;
+  flex-shrink: 0;
 }
 
 .hero-visual {
@@ -309,6 +310,7 @@ h3 {
 }
 
 .hero-red svg {
+  color: #f2f2f2;
   width: 70px;
   height: 70px;
 }
@@ -336,9 +338,11 @@ h3 {
   display: flex;
 }
 
-.principles-strip b {
-  font-size: 26px;
-  font-weight: 400;
+.principles-strip svg {
+  color: #f2f2f2;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
 }
 
 .section {
@@ -692,6 +696,10 @@ h3 {
     margin-top: 6px;
     font-size: 15px;
   }
+  .principles-strip svg {
+    width: 24px;
+    height: 24px;
+  }
   .section {
     padding-top: 55px;
     padding-bottom: 55px;
@@ -931,13 +939,12 @@ h3 {
 }
 
 .big-arrow {
-  color: #ffffff45;
-  font-family: Arial,sans-serif;
-  font-size: 160px;
-  line-height: 1.2;
+  color: #f2f2f245;
+  width: 170px;
+  height: 170px;
   position: absolute;
-  top: -35px;
-  right: 30px;
+  top: -15px;
+  right: 15px;
 }
 
 .service-detail {
@@ -1821,7 +1828,7 @@ h3 {
 }
 
 .join-photo-caption svg {
-  stroke-width: 1px;
+  color: #f2f2f2;
   width: 65px;
   height: 65px;
   position: absolute;
@@ -1968,7 +1975,7 @@ h3 {
 
 .join-team-photo {
   position: sticky;
-  top: 35px;
+  top: 135px;
 }
 
 .join-team-photo>img {

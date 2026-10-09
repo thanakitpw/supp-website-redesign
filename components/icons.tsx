@@ -32,6 +32,28 @@ export function ArrowUpRight(props: IconProps) {
   );
 }
 
+/**
+ * SUPP brand mark (the two stacked up-right chevrons from the logo), filled
+ * with currentColor. The viewBox pads the mark to ~62% of the box so it sits
+ * at the same visual weight as the stroke icons it replaces.
+ */
+export function SuppMark({ size = 24, ...props }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="-270 -272 1418 1418"
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M189 151 285 55C318 22 360 2 420 2h456v453c0 55-18 100-54 137l-96 96V151Z" />
+      <path d="M9 428C-2 395 0 345 30 310c20-22 42-32 70-32h498v502c0 55-53 92-138 92h-11V428Z" />
+    </svg>
+  );
+}
+
 export function ArrowRight(props: IconProps) {
   return (
     <Icon {...props}>

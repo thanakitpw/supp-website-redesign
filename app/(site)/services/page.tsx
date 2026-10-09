@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
-import { ArrowRight, ArrowUpRight, Check } from "@/components/icons";
+import { ArrowRight, ArrowUpRight, Check, SuppMark } from "@/components/icons";
 import { plans, processSteps, services } from "@/lib/content";
 import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -94,9 +94,7 @@ export default function ServicesPage() {
             </a>
           </div>
           <div className="service-hero-aside">
-            <span className="big-arrow" aria-hidden="true">
-              ↗
-            </span>
+            <SuppMark className="big-arrow" />
             <p>
               ONE LIFE.
               <br />
@@ -148,7 +146,7 @@ export default function ServicesPage() {
                     ))}
                   </div>
                 </div>
-                <ArrowUpRight className="detail-arrow" />
+                <SuppMark className="detail-arrow" />
               </article>
             ))}
           </div>
