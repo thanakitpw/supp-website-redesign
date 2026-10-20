@@ -27,3 +27,6 @@ migration/_captures/
 
 # scratch
 .tmp/
+
+# vercel link (local only)
+.vercel

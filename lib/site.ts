@@ -7,7 +7,7 @@ export const site = {
    * in review. Switch to the client domain at cutover — canonicals, sitemap,
    * OG URLs and every JSON-LD @id derive from this one value.
    */
-  url: "https://supp-website-redesign-bank-thanakits-projects.vercel.app",
+  url: "https://supp-website-redesign-tau.vercel.app",
   /**
    * Search-engine indexing. Keep false while the site lives on the Vercel
    * domain so it cannot compete with the client's live site; flip to true at
