@@ -242,11 +242,6 @@ h3 {
   display: flex;
 }
 
-.tiny-arrow {
-  color: var(--red);
-  flex-shrink: 0;
-}
-
 .hero-visual {
   background: #e5e5e5;
   align-self: stretch;
@@ -392,12 +387,6 @@ h3 {
   margin: 22px 0 12px;
   font-size: 32px;
   display: flex;
-}
-
-.value h3 svg {
-  color: var(--red);
-  width: 34px;
-  height: 34px;
 }
 
 .value h4 {
@@ -2597,7 +2586,20 @@ h3 {
 
 .advisor-profile-heading .advisor-thai-name {
   color: #1a1a1a;
+  align-items: center;
+  gap: 12px;
   font-size: 20px;
+  display: flex;
+}
+
+.advisor-linkedin {
+  color: var(--red);
+  line-height: 0;
+  transition: opacity .2s;
+}
+
+a.advisor-linkedin:hover {
+  opacity: .75;
 }
 
 .advisor-expertise {

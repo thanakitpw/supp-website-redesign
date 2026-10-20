@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight } from "@/components/icons";
+import { SuppMark } from "@/components/icons";
 import { nav } from "@/lib/site";
 
 export function SiteHeader() {
@@ -36,7 +36,7 @@ export function SiteHeader() {
         ))}
       </nav>
       <Link className="button nav-cta" href="/contact">
-        เริ่มคุยกับเรา <ArrowUpRight size={18} />
+        เริ่มคุยกับเรา <SuppMark size={28} />
       </Link>
     </header>
   );

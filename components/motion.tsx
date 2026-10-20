@@ -79,6 +79,8 @@ export function Motion() {
           continue;
         }
         if (opening?.contains(element)) continue;
+        // The services landing runs its own reveal (components/service-landing.tsx).
+        if (element.closest(".lp")) continue;
         // A grid whose children already stagger stays where it is.
         if (element.querySelector("[data-reveal]")) continue;
         if (element.getBoundingClientRect().top < fold) continue;

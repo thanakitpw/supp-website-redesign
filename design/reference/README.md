@@ -12,3 +12,10 @@ login, so it cannot be re-fetched with curl).
 Use these to re-verify fidelity after any change: the rebuilt site was checked by
 measuring every element's bounding box on both sites at a 1920px viewport and
 diffing them (0 differences > 2px, identical page heights on all six pages).
+
+## Services landing (added 2026-10-20)
+
+- `html/services-life-plan.html` — `/services/life-plan` from the same prototype,
+  the source for the current `/services` page.
+- `life-plan.css` — that page's own stylesheet (unminified); ported to
+  `app/(site)/services/landing.css`.

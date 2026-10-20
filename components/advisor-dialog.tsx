@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { X } from "@/components/icons";
+import { Linkedin, X } from "@/components/icons";
 import type { AdvisorProfile } from "@/lib/team";
 
 type Props = {
@@ -49,7 +49,24 @@ export function AdvisorDialog({ profile, open, onClose }: Props) {
             {profile.lastName}
           </h2>
           {profile.thaiName ? (
-            <p className="advisor-thai-name">{profile.thaiName}</p>
+            <p className="advisor-thai-name">
+              {profile.thaiName}
+              {profile.linkedin ? (
+                <a
+                  className="advisor-linkedin"
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`LinkedIn ของ ${profile.firstName}`}
+                >
+                  <Linkedin size={22} />
+                </a>
+              ) : (
+                <span className="advisor-linkedin">
+                  <Linkedin size={22} />
+                </span>
+              )}
+            </p>
           ) : null}
           {profile.nickname ? <p>{profile.nickname}</p> : null}
           {profile.expertise.length > 0 ? (

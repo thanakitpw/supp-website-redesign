@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
-import { ArrowRight, ArrowUpRight, SuppMark } from "@/components/icons";
+import { ArrowRight, SuppMark } from "@/components/icons";
 import { services } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
@@ -78,14 +78,13 @@ export default function HomePage() {
           <div className="hero-actions">
             <Link className="button" href="/contact">
               เริ่มคุยเรื่องแผนของคุณ
-              <ArrowUpRight size={20} />
+              <SuppMark size={30} />
             </Link>
             <Link className="text-link" href="/services">
               รู้จักบริการของเรา <ArrowRight size={18} />
             </Link>
           </div>
           <div className="hero-note">
-            <SuppMark className="tiny-arrow" size={26} />
             <span>YOUR LIFE. YOUR GOALS. OUR SUPPort.</span>
           </div>
         </div>
@@ -143,7 +142,7 @@ export default function HomePage() {
               เพื่อให้ทุกก้าวตอบโจทย์ชีวิตจริง
             </p>
             <Link href="/about" className="text-link">
-              รู้จัก SUPP ให้มากขึ้น <ArrowUpRight size={19} />
+              รู้จัก SUPP ให้มากขึ้น <SuppMark size={28} />
             </Link>
           </div>
         </div>
@@ -151,10 +150,7 @@ export default function HomePage() {
           {values.map((value) => (
             <div className="value" key={value.title}>
               <span>{value.number}</span>
-              <h3>
-                {value.title}
-                <SuppMark />
-              </h3>
+              <h3>{value.title}</h3>
               <h4>{value.lead}</h4>
               <p>{value.text}</p>
             </div>
@@ -175,7 +171,7 @@ export default function HomePage() {
             </h2>
           </div>
           <Link href="/services" className="text-link">
-            บริการและแพ็กเกจทั้งหมด <ArrowUpRight size={20} />
+            บริการและแพ็กเกจทั้งหมด <SuppMark size={30} />
           </Link>
         </div>
         <div className="service-grid">
@@ -250,7 +246,7 @@ export default function HomePage() {
               ออกแบบการออมและลงทุน → ลงมือทำและทบทวนร่วมกัน
             </p>
             <Link className="text-link" href="/services">
-              รู้จักขั้นตอนการวางแผน <ArrowUpRight size={19} />
+              รู้จักขั้นตอนการวางแผน <SuppMark size={28} />
             </Link>
           </div>
         </div>

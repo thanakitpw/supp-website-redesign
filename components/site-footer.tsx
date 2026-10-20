@@ -16,9 +16,9 @@ export function SiteFooter() {
             height={45}
           />
           <p>
-            Partnering in your life goals
+            Empowering your
             <br />
-            and financial peace of mind.
+            financial journey.
           </p>
         </div>
         <div>
@@ -36,17 +36,20 @@ export function SiteFooter() {
           <p>
             ชั้น 2 อาคาร QUBE
             <br />
-            83 ถนนสาทรใต้ กรุงเทพฯ 10120
+            83 ถนนสาทรใต้ แขวงยานนาวา
+            <br />
+            เขตสาทร กรุงเทพมหานคร
+            <br />
+            10120
           </p>
         </div>
       </div>
       <div className="footer-wordmark">
-        YOUR GOALS. WE SUPP.
+        YOUR GOALS, WE SUPP.
         <SuppMark />
       </div>
       <div className="footer-bottom">
         <span>© 2026 SUPP FUTURE SOLUTIONS CO., LTD.</span>
-        <span>MONEY ↗ LIFE ↗ GOALS</span>
       </div>
     </footer>
   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "@/components/icons";
+import { SuppMark } from "@/components/icons";
 
 /** Shared closing CTA — identical on home, about, services and blog. */
 export function CtaSection() {
@@ -18,7 +18,7 @@ export function CtaSection() {
       </div>
       <Link className="button light" href="/contact">
         เริ่มคุยเรื่องแผนของคุณ
-        <ArrowUpRight size={20} />
+        <SuppMark size={30} />
       </Link>
     </section>
   );

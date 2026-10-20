@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { AdvisorDialog } from "@/components/advisor-dialog";
-import { ArrowLeft, ArrowUpRight } from "@/components/icons";
+import { ArrowLeft, SuppMark } from "@/components/icons";
 import type { TeamMember } from "@/lib/team";
 
 /**
@@ -63,7 +63,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
                 {member.role}
                 <small>ดูประวัติและความเชี่ยวชาญ</small>
               </span>
-              <ArrowUpRight size={20} />
+              <SuppMark size={30} />
             </button>
           </div>
         </div>
@@ -108,7 +108,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
             aria-haspopup="dialog"
             onClick={() => setDialogOpen(true)}
           >
-            อ่านประวัติฉบับเต็ม <ArrowUpRight size={17} />
+            อ่านประวัติฉบับเต็ม <SuppMark size={26} />
           </button>
           <button
             className="team-back-button"

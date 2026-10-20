@@ -17,6 +17,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - เฟส 5 Build — 🔵 WIP · **NEXT = T5.0b foundation scaffold** (T5.0a architecture ✅ DONE) · 🔒 single ก่อนแตก team
   - ✅ Supabase เชื่อมแล้ว (2026-10-06): project ref `czqlzbjhkuiaqdowrwzf`, publishable key ใน `.env.local`, client `lib/supabase/{server,client}.ts`, Supabase MCP ใน `.mcp.json`. ยังไม่มีตาราง `articles` (สร้างตาม architecture.md §3.1). service role key ยังไม่ได้รับ — ใช้เมื่อต้องเขียนข้อมูลฝั่ง server เท่านั้น
   - 📥 ลูกค้าส่งบทความใหม่ 6 บท (Google Doc "Blogs") — ไม่มีรูปในไฟล์, รอยืนยัน slug/หมวด ก่อน upsert
+- ✅ **Services = life-plan landing** (2026-10-20): `/services` ใช้ดีไซน์ `/services/life-plan` จาก prototype (ref ใน `design/reference/html/services-life-plan.html` + `life-plan.css`) · CSS `app/(site)/services/landing.css` · behaviour `components/service-landing.tsx` (reveal, sticky scene, hero parallax) · ใช้ site header เดิมแทน lp-nav · copy ตรง prototype 100% · JSON-LD + FAQPage
 - ✅ **Motion layer**: `app/motion.css` + `components/motion.tsx` — hero/page-heading เข้าตอน first paint, ส่วนที่อยู่ใต้ fold reveal ตอน scroll (IntersectionObserver), hover/focus micro-interaction ทุกการ์ด. ไม่แตะ markup/สี/layout เดิม, SSR html เหมือนเดิม, ปิดเองเมื่อ `prefers-reduced-motion`
 - ✅ **About / ที่ปรึกษา** (อัปเดต 2026-10-08 จาก Google Doc "สำเนาของ supp team"): `lib/team.ts` = 12 คนตาม doc (ชื่อไทย/ชื่อเล่น/quote/กลุ่มลูกค้า/ประสบการณ์/การศึกษา/คุณวุฒิ/ใบอนุญาต ครบ) · ตัด 4 คนที่ไม่อยู่ใน doc (Jakaphan, Sahathon, Wanravee, Sakkasem) ออกแล้วตามที่ลูกค้ายืนยัน 2026-10-09 · Sujira = Ratchakorn (เลขใบอนุญาตตรงกัน) ใช้รูป sujira.webp
   - ⏳ รอลูกค้า: รูป Panadda, Worawut, Nicharat, Taneeya · เลขตัวแทนประกันชีวิตของ Akasit (doc ซ้ำกับ Karunyaporn 5001031173 → ใช้ 5801069149 จากเว็บเก่าไว้ก่อน) · ยืนยันว่า Ratchakorn คือ Sujira
@@ -27,6 +28,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 - 🔍 **SEO program (`seo-program-prompt.md`)** — เฟส 1 Research ✅ DONE (2026-10-08): แผน + checklist 63 ข้อ ที่ https://claude.ai/artifact/KcZ1919r3T89kntPbe4L4t · ⏳ รอผู้ใช้ตัดสินใจ voice / ทางขึ้นบทความ / กฎ commit ก่อนเริ่มเฟส 2 (VOICE-GUIDE + บทที่ 1)
   - เฟส 5 (หน้าให้ลูกค้าดู) ✅ build ผ่าน, ยังไม่ deploy: `/reports/seo-keywords` (noindex, ไม่อยู่ใน sitemap, ไม่มี header/footer/LINE) อ่าน keyword บทความจาก frontmatter `content/articles/NN-slug.md` (12 ไฟล์ = แผน ยังไม่มีเนื้อหา) + keyword หน้าใน `lib/keyword-plan.ts` · หน้า marketing ย้ายเข้า route group `app/(site)/` (path เดิมไม่เปลี่ยน)
   - P0 ที่เจอ: path `/about` `/join-us` ไม่ตรง parity (`/about-supp/` `/join-supp/` `/book-a-free-consult/` → 404 บน preview, ไม่มี trailingSlash) · 35 บทเดิมยังไม่ย้าย + ไม่มี redirect-map · ไม่มี GA4/GSC · ฟอร์มเป็น mailto
+- 🚀 **Deploy ย้ายไป Vercel account ใหม่** (2026-10-09): team `agencybestsolutions-9690`, project `supp-website-redesign` (framework=nextjs) · prod = https://supp-website-redesign-tau.vercel.app · `lib/site.ts` url ชี้โดเมนนี้แล้ว (ยัง noindex) · env `NEXT_PUBLIC_SUPABASE_*` ตั้งครบ 3 env · token ไม่เก็บในไฟล์ ส่งผ่าน `VERCEL_TOKEN` ตอนรัน CLI
 - เฟส 6–8 — ⬜ TODO (pre-cutover / cutover / post-launch)
 
 ---

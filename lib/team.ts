@@ -32,6 +32,8 @@ export type AdvisorProfile = {
   lastName: string;
   thaiName: string;
   nickname: string;
+  /** LinkedIn profile URL; until it's set the dialog shows the icon unlinked. */
+  linkedin?: string;
   expertise: string[];
   quote: string[];
   sections: ProfileSection[];
