@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "SUPP Insights — เรื่องเงินที่เชื่อมกับชีวิต",
+  title: "SUPP Insights | เรื่องเงินที่เชื่อมกับชีวิต",
   description:
     "มุมมองเรื่องการวางแผนการเงินที่เชื่อมกับชีวิตจริง เริ่มจากคำถามใกล้ตัว ไปสู่ความเข้าใจที่มากขึ้น",
   path: "/blog",

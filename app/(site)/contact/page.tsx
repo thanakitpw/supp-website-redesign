@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Contact — เริ่มคุยเรื่องแผนของคุณ",
+  title: "Contact | เริ่มคุยเรื่องแผนของคุณ",
   description:
     "ติดต่อ SUPP เพื่อเริ่มวางแผนการเงินที่เชื่อมกับชีวิตคุณ โทร 064-641-9245 หรืออีเมล info@suppth.com สำนักงานอาคาร QUBE ถนนสาทรใต้ กรุงเทพฯ",
   path: "/contact",

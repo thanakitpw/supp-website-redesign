@@ -21,7 +21,7 @@ const notoSansThai = Noto_Sans_Thai({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SUPP — เคียงข้างทุกเป้าหมายชีวิต",
+    default: "SUPP | เคียงข้างทุกเป้าหมายชีวิต",
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: site.locale,
     url: site.url,
-    title: "SUPP — เคียงข้างทุกเป้าหมายชีวิต",
+    title: "SUPP | เคียงข้างทุกเป้าหมายชีวิต",
     description: site.description,
   },
   twitter: { card: "summary_large_image" },

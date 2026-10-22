@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  ArrowUpRight,
   Check,
   Compass,
   HeartHandshake,
@@ -13,7 +12,7 @@ import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Join us — Design Your Own Life",
+  title: "Join us | Design Your Own Life",
   description:
     "ออกแบบชีวิตและรายได้ของคุณเอง กับอาชีพ Financial Life Partner ที่ SUPP รู้จักบทบาทงาน เส้นทางพัฒนา และเริ่มต้นผ่าน Open House",
   path: "/join-us",
@@ -211,7 +210,7 @@ export default function JoinUsPage() {
                 rel="noopener noreferrer"
               >
                 สนใจร่วมงานกับ SUPP
-                <ArrowUpRight size={20} />
+                <SuppMark size={30} />
                 <span className="sr-only"> (เปิดแบบฟอร์มในแท็บใหม่)</span>
               </a>
               <a className="text-link" href="#open-house">
@@ -268,7 +267,7 @@ export default function JoinUsPage() {
               <p key={pain.number}>
                 <span>{pain.number}</span>
                 {pain.text}
-                <ArrowUpRight size={20} />
+                <SuppMark size={30} />
               </p>
             ))}
           </div>
@@ -472,7 +471,7 @@ export default function JoinUsPage() {
               rel="noopener noreferrer"
             >
               ลงทะเบียนแสดงความสนใจ
-              <ArrowUpRight size={20} />
+              <SuppMark size={30} />
               <span className="sr-only"> (เปิดแบบฟอร์มในแท็บใหม่)</span>
             </a>
             <a
@@ -481,7 +480,7 @@ export default function JoinUsPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              อ่านเรื่องราว Design Your Own Life <ArrowUpRight size={16} />
+              อ่านเรื่องราว Design Your Own Life <SuppMark size={24} />
             </a>
           </div>
         </section>

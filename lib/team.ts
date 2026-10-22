@@ -83,6 +83,7 @@ export const team: TeamMember[] = [
       "lastName": "Thanomsap",
       "thaiName": "กรัณยพร ถนอมทรัพย์",
       "nickname": "JJay",
+      "linkedin": "https://www.linkedin.com/in/karunyaporn-thanomsap-135769195/",
       "expertise": [
         "Financial Planning",
         "Risk Management"
@@ -161,7 +162,7 @@ export const team: TeamMember[] = [
             {
               "code": "MDRT",
               "name": "Million Dollar Round Table",
-              "description": "Member of Million Dollar Round Table — The Premier Association of Financial Professionals®"
+              "description": "Member of Million Dollar Round Table, The Premier Association of Financial Professionals®"
             }
           ]
         },
@@ -226,6 +227,7 @@ export const team: TeamMember[] = [
       "lastName": "Assawamongkolpun",
       "thaiName": "เอกสิทธิ์ อัศวมงคลพันธุ์",
       "nickname": "Ham",
+      "linkedin": "https://www.linkedin.com/in/hamakasit/",
       "expertise": [
         "Financial Planning",
         "Retirement Planning"
@@ -314,7 +316,7 @@ export const team: TeamMember[] = [
             {
               "code": "MDRT",
               "name": "Million Dollar Round Table",
-              "description": "Member of Million Dollar Round Table — The Premier Association of Financial Professionals®"
+              "description": "Member of Million Dollar Round Table, The Premier Association of Financial Professionals®"
             }
           ]
         },
@@ -362,6 +364,7 @@ export const team: TeamMember[] = [
       "lastName": "Unrasmeewong",
       "thaiName": "ฉัตรชัย อุ่นรัศมีวงศ์",
       "nickname": "Fair",
+      "linkedin": "https://www.linkedin.com/in/chatchai-unrasmeewong-5956951a8/",
       "expertise": [
         "Financial Planning",
         "Retirement Planning"
@@ -434,7 +437,7 @@ export const team: TeamMember[] = [
             {
               "code": "MDRT",
               "name": "Million Dollar Round Table",
-              "description": "Member of Million Dollar Round Table — The Premier Association of Financial Professionals®"
+              "description": "Member of Million Dollar Round Table, The Premier Association of Financial Professionals®"
             }
           ]
         },
@@ -562,7 +565,7 @@ export const team: TeamMember[] = [
             {
               "code": "MDRT",
               "name": "Million Dollar Round Table",
-              "description": "Member of Million Dollar Round Table — The Premier Association of Financial Professionals®"
+              "description": "Member of Million Dollar Round Table, The Premier Association of Financial Professionals®"
             }
           ]
         },
@@ -611,6 +614,7 @@ export const team: TeamMember[] = [
       "lastName": "Chanthanakan",
       "thaiName": "รัชกร ชาญธนากานต์",
       "nickname": "G",
+      "linkedin": "https://www.linkedin.com/in/ratchakorn-chanthanakarn",
       "expertise": [
         "Retirement Planning",
         "Wealth Accumulation"
@@ -644,7 +648,7 @@ export const team: TeamMember[] = [
               "text": "SCB Julius Baer Securities Co., Ltd."
             },
             {
-              "label": "Client Service Manager — Global Banking",
+              "label": "Client Service Manager, Global Banking",
               "text": "HSBC Thailand"
             }
           ]
@@ -722,6 +726,7 @@ export const team: TeamMember[] = [
       "lastName": "Kerdpornputhamon",
       "thaiName": "เตชินท์ เกิดพรพุทธมนต์",
       "nickname": "Van",
+      "linkedin": "https://www.linkedin.com/in/teshin-kerdpornputhamon/",
       "expertise": [
         "Risk Management & Insurance Planning",
         "Investment Planning"
@@ -796,7 +801,7 @@ export const team: TeamMember[] = [
             {
               "code": "MDRT",
               "name": "Million Dollar Round Table",
-              "description": "Member of Million Dollar Round Table — The Premier Association of Financial Professionals®"
+              "description": "Member of Million Dollar Round Table, The Premier Association of Financial Professionals®"
             }
           ]
         },
@@ -1224,7 +1229,7 @@ export const team: TeamMember[] = [
           "className": "advisor-education",
           "paragraphs": [
             {
-              "label": "Master of Business Administration — Young Executive Program",
+              "label": "Master of Business Administration (Young Executive Program)",
               "text": "Faculty of Commerce and Accountancy, Chulalongkorn University"
             },
             {

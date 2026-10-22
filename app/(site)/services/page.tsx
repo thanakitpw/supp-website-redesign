@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 import "./landing.css";
 
 export const metadata = pageMetadata({
-  title: "Services — บริการและแพ็กเกจ",
+  title: "Services | บริการและแพ็กเกจ",
   description:
     "วางแผนเรื่องเงินให้ตอบโจทย์ชีวิตคุณ ครอบคลุม Planning, Protection, Wealth Building และ Ongoing Support พร้อมแพ็กเกจเริ่มต้น 5,900 บาท",
   path: "/services",
@@ -365,7 +365,7 @@ export default function ServicesPage() {
                 >
                   <div data-lp-reveal>
                     <span className="lp-kicker">
-                      0{index + 1} — {chapter.en.toUpperCase()}
+                      0{index + 1} {chapter.en.toUpperCase()}
                     </span>
                     <h2>
                       <span>{chapter.title[0]}</span>

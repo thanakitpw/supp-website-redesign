@@ -7,13 +7,13 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = {
   ...pageMetadata({
-    title: "SUPP — เคียงข้างทุกเป้าหมายชีวิต",
+    title: "SUPP | เคียงข้างทุกเป้าหมายชีวิต",
     description:
       "เริ่มจากชีวิตคุณ แล้วค่อยออกแบบเรื่องเงิน วางแผนการเงิน ความคุ้มครอง การออมและลงทุน พร้อมการดูแลต่อเนื่องจาก SUPP",
     path: "/",
   }),
   // Home keeps the bare brand title rather than the "%s | SUPP" template.
-  title: { absolute: "SUPP — เคียงข้างทุกเป้าหมายชีวิต" },
+  title: { absolute: "SUPP | เคียงข้างทุกเป้าหมายชีวิต" },
 };
 
 const values = [

@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 import { team } from "@/lib/team";
 
 export const metadata = pageMetadata({
-  title: "About SUPP — เริ่มจากชีวิตคุณ",
+  title: "About SUPP | เริ่มจากชีวิตคุณ",
   description:
     "รู้จัก SUPP พาร์ทเนอร์ที่ช่วยให้คุณมองเรื่องเงินชัดเจนขึ้น ทีม Financial Life Partner ที่เริ่มต้นจากการรับฟังชีวิตและเป้าหมายของคุณ",
   path: "/about",
