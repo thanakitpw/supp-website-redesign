@@ -16,9 +16,9 @@ export function SiteFooter() {
             height={45}
           />
           <p>
-            Empowering your
+            Empowering Your
             <br />
-            financial journey.
+            Financial Journey.
           </p>
         </div>
         <div>
