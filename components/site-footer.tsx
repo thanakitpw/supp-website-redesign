@@ -1,7 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SuppMark } from "@/components/icons";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  SuppMark,
+  Tiktok,
+  Youtube,
+} from "@/components/icons";
 import { nav, site } from "@/lib/site";
+
+const socialIcons = { Facebook, Instagram, TikTok: Tiktok, LinkedIn: Linkedin, YouTube: Youtube };
 
 export function SiteFooter() {
   return (
@@ -20,6 +29,23 @@ export function SiteFooter() {
             <br />
             Financial Journey.
           </p>
+          <ul className="footer-social">
+            {site.social.map(({ name, href }) => {
+              const Icon = socialIcons[name];
+              return (
+                <li key={name}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`SUPP บน ${name}`}
+                  >
+                    <Icon size={20} />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div>
           <p className="footer-label">EXPLORE</p>

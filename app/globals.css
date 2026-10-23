@@ -525,6 +525,34 @@ h3 {
   text-decoration: underline;
 }
 
+.footer-social {
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.footer-top .footer-social a {
+  color: #a8a8a8;
+  border: 1px solid #444;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  line-height: 1;
+  transition: color .2s, border-color .2s;
+  display: flex;
+}
+
+.footer-top .footer-social a:hover,
+.footer-top .footer-social a:focus-visible {
+  color: #fff;
+  border-color: #d94c4c;
+  text-decoration: none;
+}
+
 .footer-label {
   letter-spacing: 2px;
   margin-bottom: 20px;

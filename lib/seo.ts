@@ -70,6 +70,7 @@ export function organizationJsonLd() {
           postalCode: site.address.postalCode,
           addressCountry: site.address.country,
         },
+        sameAs: site.social.map((s) => s.href),
         knowsLanguage: ["th", "en"],
         serviceType: [
           "Financial Planning",

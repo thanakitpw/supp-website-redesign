@@ -29,6 +29,14 @@ export const site = {
     postalCode: "10120",
     country: "TH",
   },
+  /** Official social profiles — footer icons and the Organization `sameAs`. */
+  social: [
+    { name: "Facebook", href: "https://www.facebook.com/supp.th" },
+    { name: "Instagram", href: "https://www.instagram.com/supp_th" },
+    { name: "TikTok", href: "https://www.tiktok.com/@supp_th" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/supp.th" },
+    { name: "YouTube", href: "https://www.youtube.com/@suppth" },
+  ],
   joinFormUrl: "https://forms.gle/4xboXcdkonZzR3Fk8",
   storyUrl:
     "https://best-bat-385.notion.site/Design-Your-Own-Life-30c047d9d06e80fa8970e8c30aa70749",
