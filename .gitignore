@@ -30,3 +30,8 @@ migration/_captures/
 
 # vercel link (local only)
 .vercel
+
+# cloudflare (opennext build output, wrangler state)
+.open-next/
+.wrangler/
+.dev.vars

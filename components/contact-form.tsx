@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowUpRight, Check, ChevronDown, Copy, Mail } from "@/components/icons";
+import { track } from "@/lib/analytics";
 import { site } from "@/lib/site";
 
 const PLAN_LABELS = {
@@ -45,6 +46,7 @@ export function ContactForm() {
         `${String(data.get("message")).trim() || "ขอพูดคุยกับทีมเบื้องต้น"}\n\n` +
         `ขอบคุณครับ/ค่ะ`,
     );
+    track("generate_lead", { form_name: "contact", plan });
   }
 
   async function handleCopy() {
@@ -144,7 +146,7 @@ export function ContactForm() {
             {site.email}
           </p>
           <pre>{draft}</pre>
-          <div className="draft-actions">
+          <div className="draft-actions" data-track-location="contact_form">
             <a
               className="button"
               href={`mailto:${site.email}?subject=${encodeURIComponent(

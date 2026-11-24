@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/analytics";
 import {
   Facebook,
   Instagram,
@@ -76,6 +77,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 SUPP FUTURE SOLUTIONS CO., LTD.</span>
+        <CookieSettingsButton />
       </div>
     </footer>
   );

@@ -3,17 +3,17 @@ export const site = {
   legalName: "SUPP FUTURE SOLUTIONS CO., LTD.",
   legalNameTh: "บริษัท ซัพพ์ ฟิวเจอร์ โซลูชั่นส์ จำกัด",
   /**
-   * Canonical origin. Currently the Vercel deployment domain while the site is
-   * in review. Switch to the client domain at cutover — canonicals, sitemap,
-   * OG URLs and every JSON-LD @id derive from this one value.
+   * Canonical origin — the client domain (apex; www 301s here). Canonicals,
+   * sitemap, OG URLs and every JSON-LD @id derive from this one value.
    */
-  url: "https://supp-website-redesign-tau.vercel.app",
+  url: "https://yourgoalswesupp.com",
+  /** Search-engine indexing. Live on the client domain since cutover. */
+  indexable: true,
   /**
-   * Search-engine indexing. Keep false while the site lives on the Vercel
-   * domain so it cannot compete with the client's live site; flip to true at
-   * cutover, together with `url` above.
+   * GA4 Measurement ID (G-XXXXXXXXXX). Public by design (it ships in the page
+   * anyway). Empty = analytics and the cookie banner stay off.
    */
-  indexable: false,
+  gaMeasurementId: "G-D2FGT7TTEH",
   locale: "th_TH",
   tagline: "Partnering in your life goals and financial peace of mind.",
   description:
