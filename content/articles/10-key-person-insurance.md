@@ -1,7 +1,7 @@
 ---
 ลำดับ: 10 จาก 12
 slug: key-person-insurance
-url: /blog/key-person-insurance/
+url: /blog/key-person-insurance
 title: "ประกันคนสำคัญ (Key Person) สำหรับธุรกิจ SME"
 description: ""
 keyword_หลัก: "ประกันคนสำคัญ"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ประกันคนสำคัญ (Key Person) สำหรับธุรกิจ SME

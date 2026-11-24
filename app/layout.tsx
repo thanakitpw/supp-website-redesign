@@ -49,8 +49,9 @@ export const metadata: Metadata = {
     url: site.url,
     title: "SUPP | เคียงข้างทุกเป้าหมายชีวิต",
     description: site.description,
+    images: [{ url: "/images/og/home.jpg", width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", images: ["/images/og/home.jpg"] },
   robots: site.indexable
     ? {
         index: true,

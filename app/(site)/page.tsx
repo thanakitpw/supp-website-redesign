@@ -7,13 +7,15 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = {
   ...pageMetadata({
-    title: "SUPP | เคียงข้างทุกเป้าหมายชีวิต",
+    title: "ที่ปรึกษาการเงินส่วนบุคคล วางแผนการเงินตามเป้าหมายชีวิต | SUPP",
     description:
-      "เริ่มจากชีวิตคุณ แล้วค่อยออกแบบเรื่องเงิน วางแผนการเงิน ความคุ้มครอง การออมและลงทุน พร้อมการดูแลต่อเนื่องจาก SUPP",
+      "SUPP ที่ปรึกษาการเงินส่วนบุคคล เริ่มจากชีวิตและเป้าหมายของคุณ แล้วค่อยวางแผนการเงิน ความคุ้มครอง การออมและลงทุน พร้อมดูแลต่อเนื่อง สำนักงานสาทร กรุงเทพฯ",
     path: "/",
+    image: "/images/og/home.jpg",
   }),
-  // Home keeps the bare brand title rather than the "%s | SUPP" template.
-  title: { absolute: "SUPP | เคียงข้างทุกเป้าหมายชีวิต" },
+  // Home sets its full title (keyword first, brand last) instead of the
+  // "%s | SUPP" template.
+  title: { absolute: "ที่ปรึกษาการเงินส่วนบุคคล วางแผนการเงินตามเป้าหมายชีวิต | SUPP" },
 };
 
 const values = [
@@ -96,6 +98,7 @@ export default function HomePage() {
             fill
             sizes="(max-width: 700px) 100vw, 48vw"
             priority
+            fetchPriority="high"
           />
           <div className="hero-caption">
             <span>ROOM FOR WHAT MATTERS</span>

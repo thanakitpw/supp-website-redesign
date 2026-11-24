@@ -1,7 +1,7 @@
 ---
 ลำดับ: 6 จาก 12
 slug: emergency-fund
-url: /blog/emergency-fund/
+url: /blog/emergency-fund
 title: "เงินสำรองฉุกเฉินควรมีกี่เดือน คิดจากภาระจริงของบ้าน"
 description: ""
 keyword_หลัก: "เงินสำรองฉุกเฉิน"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # เงินสำรองฉุกเฉินควรมีกี่เดือน คิดจากภาระจริงของบ้าน

@@ -29,12 +29,12 @@ export type KeywordRow = {
 export const pageKeywords: KeywordRow[] = [
   { keyword: "SUPP, SUPP Financial, ซัพพ์", page: "หน้าแรก", path: "/", type: "แบรนด์", competitors: "ชื่อเฉพาะของ SUPP" },
   { keyword: "ที่ปรึกษาการเงินส่วนบุคคล", page: "หน้าแรก", path: "/", type: "บริการ", competitors: "K-Expert กสิกรไทย, Krungsri the Coach" },
-  { keyword: "บริการวางแผนการเงิน, ค่าบริการวางแผนการเงิน", page: "บริการ", path: "/services/", type: "ซื้อ", competitors: "K-Expert กสิกรไทย, wealthythai" },
-  { keyword: "ทีมที่ปรึกษาการเงิน มีใบอนุญาต", page: "เกี่ยวกับเรา", path: "/about-supp/", type: "บริการ", competitors: "ยังไม่พบคู่แข่งที่ตรงคำนี้" },
-  { keyword: "ปรึกษาการเงินฟรี", page: "ขอคำปรึกษาเบื้องต้น", path: "/book-a-free-consult/", type: "ซื้อ", competitors: "ธนาคาร, คลินิกการเงินของสมาคมนักวางแผนการเงินไทย" },
-  { keyword: "สมัครงานที่ปรึกษาการเงิน", page: "ร่วมงานกับเรา", path: "/join-supp/", type: "อาชีพ", competitors: "JobsDB, JobThai, K-Advisor" },
-  { keyword: "บทความวางแผนการเงิน", page: "บทความ", path: "/blog/", type: "ความรู้", competitors: "Finnomena, SCB, Krungsri the Coach" },
-  { keyword: "ติดต่อ SUPP", page: "ติดต่อ", path: "/contact/", type: "แบรนด์", competitors: "ชื่อเฉพาะของ SUPP" },
+  { keyword: "บริการวางแผนการเงิน, ค่าบริการวางแผนการเงิน", page: "บริการ", path: "/services", type: "ซื้อ", competitors: "K-Expert กสิกรไทย, wealthythai" },
+  { keyword: "ทีมที่ปรึกษาการเงิน มีใบอนุญาต", page: "เกี่ยวกับเรา", path: "/about", type: "บริการ", competitors: "ยังไม่พบคู่แข่งที่ตรงคำนี้" },
+  { keyword: "ปรึกษาการเงินฟรี", page: "ติดต่อ / ขอคำปรึกษาเบื้องต้น", path: "/contact", type: "ซื้อ", competitors: "ธนาคาร, คลินิกการเงินของสมาคมนักวางแผนการเงินไทย" },
+  { keyword: "สมัครงานที่ปรึกษาการเงิน", page: "ร่วมงานกับเรา", path: "/join-us", type: "อาชีพ", competitors: "JobsDB, JobThai, K-Advisor" },
+  { keyword: "บทความวางแผนการเงิน", page: "บทความ", path: "/blog", type: "ความรู้", competitors: "Finnomena, SCB, Krungsri the Coach" },
+  { keyword: "ติดต่อ SUPP", page: "ติดต่อ", path: "/contact", type: "แบรนด์", competitors: "ชื่อเฉพาะของ SUPP" },
 ];
 
 export type PlannedArticle = {

@@ -1,7 +1,7 @@
 ---
 ลำดับ: 9 จาก 12
 slug: health-insurance-with-group-cover
-url: /blog/health-insurance-with-group-cover/
+url: /blog/health-insurance-with-group-cover
 title: "ประกันสุขภาพเมื่อมีประกันกลุ่มบริษัทแล้ว ควรเสริมตรงไหน"
 description: ""
 keyword_หลัก: "ประกันสุขภาพ ประกันกลุ่ม"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ประกันสุขภาพเมื่อมีประกันกลุ่มบริษัทแล้ว ควรเสริมตรงไหน

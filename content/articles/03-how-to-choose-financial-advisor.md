@@ -1,7 +1,7 @@
 ---
 ลำดับ: 3 จาก 12
 slug: how-to-choose-financial-advisor
-url: /blog/how-to-choose-financial-advisor/
+url: /blog/how-to-choose-financial-advisor
 title: "วิธีเลือกที่ปรึกษาการเงิน ตรวจใบอนุญาตและคุณวุฒิก่อนคุย"
 description: ""
 keyword_หลัก: "วิธีเลือกที่ปรึกษาการเงิน"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /about-supp/
-  - /services/
-  - /book-a-free-consult/
+  - /about
+  - /services
+  - /contact
 ---
 
 # วิธีเลือกที่ปรึกษาการเงิน ตรวจใบอนุญาตและคุณวุฒิก่อนคุย

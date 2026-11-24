@@ -1,7 +1,7 @@
 ---
 ลำดับ: 1 จาก 12
 slug: financial-planning-fees
-url: /blog/financial-planning-fees/
+url: /blog/financial-planning-fees
 title: "ค่าบริการวางแผนการเงิน 3 แบบ และสิ่งที่ได้ในแต่ละแพ็กเกจ"
 description: ""
 keyword_หลัก: "ค่าบริการวางแผนการเงิน"
@@ -14,9 +14,8 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /contact/
+  - /services
+  - /contact
 ---
 
 # ค่าบริการวางแผนการเงิน 3 แบบ และสิ่งที่ได้ในแต่ละแพ็กเกจ

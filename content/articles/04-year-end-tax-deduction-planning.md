@@ -1,7 +1,7 @@
 ---
 ลำดับ: 4 จาก 12
 slug: year-end-tax-deduction-planning
-url: /blog/year-end-tax-deduction-planning/
+url: /blog/year-end-tax-deduction-planning
 title: "ลดหย่อนภาษีปลายปี จัด SSF RMF และประกันให้เข้ากับแผนเกษียณ"
 description: ""
 keyword_หลัก: "ลดหย่อนภาษี"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ลดหย่อนภาษีปลายปี จัด SSF RMF และประกันให้เข้ากับแผนเกษียณ

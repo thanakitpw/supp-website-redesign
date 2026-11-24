@@ -8,11 +8,11 @@ import { site } from "@/lib/site";
 import "./landing.css";
 
 export const metadata = pageMetadata({
-  title: "Services | บริการและแพ็กเกจ",
+  title: "บริการวางแผนการเงิน และค่าบริการแต่ละแพ็กเกจ",
   description:
-    "วางแผนเรื่องเงินให้ตอบโจทย์ชีวิตคุณ ครอบคลุม Planning, Protection, Wealth Building และ Ongoing Support พร้อมแพ็กเกจเริ่มต้น 5,900 บาท",
+    "บริการวางแผนการเงินตามเป้าหมายชีวิต ครอบคลุม Planning, Protection, Wealth Building และ Ongoing Support ค่าบริการวางแผนการเงินเริ่มต้น 5,900 บาท",
   path: "/services",
-  image: "/images/planning.webp",
+  image: "/images/og/services.jpg",
 });
 
 /*
@@ -277,7 +277,9 @@ export default function ServicesPage() {
                   alt="ช่วงเวลาของครอบครัวริมทะเล"
                   width={1600}
                   height={863}
+                  sizes="(max-width: 900px) 55vw, 32vw"
                   priority
+                  fetchPriority="high"
                 />
                 <span>MAKE ROOM FOR WHAT MATTERS.</span>
               </div>
@@ -297,6 +299,7 @@ export default function ServicesPage() {
                   alt="พื้นที่สำหรับใช้ชีวิตในแบบที่ต้องการ"
                   width={1600}
                   height={1067}
+                  sizes="(max-width: 900px) 45vw, 18vw"
                 />
                 <span>Money. Life. Goals.</span>
               </div>
@@ -334,6 +337,7 @@ export default function ServicesPage() {
                       alt=""
                       width={chapter.size[0]}
                       height={chapter.size[1]}
+                      sizes="(max-width: 900px) 100vw, 50vw"
                     />
                     <div className="lp-scene-caption">
                       <span>0{index + 1} / 04</span>
@@ -346,7 +350,7 @@ export default function ServicesPage() {
                     <a
                       key={chapter.id}
                       href={`#${chapter.id}`}
-                      aria-label={chapter.en}
+                      aria-label={`${String(index + 1).padStart(2, "0")} ${chapter.en}`}
                       aria-current={index === 0 ? "step" : undefined}
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -442,6 +446,7 @@ export default function ServicesPage() {
                   src="/images/fintech-reference.webp"
                   width={2940}
                   height={1396}
+                  sizes="(max-width: 900px) 200vw, 100vw"
                   alt="ตัวอย่างหน้าจอ GoalsMapper แสดงภาพจำลองรายรับ รายจ่าย และเป้าหมายทางการเงินตามช่วงอายุ"
                 />
               </div>

@@ -29,6 +29,13 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
   - เฟส 5 (หน้าให้ลูกค้าดู) ✅ build ผ่าน, ยังไม่ deploy: `/reports/seo-keywords` (noindex, ไม่อยู่ใน sitemap, ไม่มี header/footer/LINE) อ่าน keyword บทความจาก frontmatter `content/articles/NN-slug.md` (12 ไฟล์ = แผน ยังไม่มีเนื้อหา) + keyword หน้าใน `lib/keyword-plan.ts` · หน้า marketing ย้ายเข้า route group `app/(site)/` (path เดิมไม่เปลี่ยน)
   - P0 ที่เจอ: path `/about` `/join-us` ไม่ตรง parity (`/about-supp/` `/join-supp/` `/book-a-free-consult/` → 404 บน preview, ไม่มี trailingSlash) · 35 บทเดิมยังไม่ย้าย + ไม่มี redirect-map · ไม่มี GA4/GSC · ฟอร์มเป็น mailto
 - 🚀 **Deploy ย้ายไป Vercel account ใหม่** (2026-10-09): team `agencybestsolutions-9690`, project `supp-website-redesign` (framework=nextjs) · prod = https://supp-website-redesign-tau.vercel.app · `lib/site.ts` url ชี้โดเมนนี้แล้ว (ยัง noindex) · env `NEXT_PUBLIC_SUPABASE_*` ตั้งครบ 3 env · token ไม่เก็บในไฟล์ ส่งผ่าน `VERCEL_TOKEN` ตอนรัน CLI
+- ☁️ **Cloudflare Workers = production** (2026-10-26 setup, live บน yourgoalswesupp.com 2026-10-27 · Vercel เหลือเป็นสำรอง): `@opennextjs/cloudflare` + `wrangler.jsonc` (worker `supp-website-redesign`, incremental cache = static assets เพราะไม่มี ISR) · deploy = `npm run cf:deploy` (ต้อง export `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` จาก `.env.local`) · URL = https://supp-website-redesign.supp-website-redesign.workers.dev · zone `yourgoalswesupp.com` อยู่ใน Cloudflare แล้ว (Free, **active** ตั้งแต่ 2026-10-26 21:27 น. — NS ที่ Ruk-com เปลี่ยนเป็น `brad`/`nancy.ns.cloudflare.com` แล้ว; rollback = คืน NS `th55`/`vth55.ruk-com.in.th`) · A @/www ยังชี้ WordPress เดิม `45.64.187.212` (ก่อน cutover) → 2026-10-27 ผูก custom domain แล้ว ดู T7.1
+  - ⚠️ บทความเดิม 35 บทยัง 301 ชั่วคราวไป `/blog` (ยังไม่ย้ายเนื้อหา) — เมื่อย้ายบทความ ต้องแก้ `new_path` ใน redirect-map.csv เป็น slug อังกฤษรายบท, record เมล/A import ครบตรงกับ Ruk-com (เช็ค 2026-10-26)
+- 🔧 **SEO fix round (2026-11-24) — WIP (โค้ดแก้แล้ว ยังไม่ build/deploy: ดิสก์เครื่องเต็ม ติดตั้ง node_modules ไม่ได้)**
+  - GSC (บัญชี agency, `sc-domain:yourgoalswesupp.com`, ข้อมูลเริ่ม 1 พ.ย.): 21 indexed / 46 not indexed · **ยังไม่ submit sitemap** · 32 clicks/726 imp (ส่วนใหญ่ "supp") · บทเก่า "กับดัก lifestyle inflation" มี 91 imp (ย้ายบทนี้ก่อน) · `/home-demo/` ยังถูก index + มีคลิก · JobPosting invalid (hiringOrganization type, datePosted)
+  - GA4 property `561871262` (Best Solutions › yourgoalswesupp.com) รับข้อมูลแล้ว (18 users/7 วัน, event `click_join_form` เข้า) · **ยังไม่ mark key event** · **ยังไม่ link GSC**
+  - แก้ในโค้ด: redirect 1 hop (ปิด trailing-slash 308 ของ Next, ลง legacy ทั้งมี/ไม่มี `/` + `/feed/`, ปลายทาง absolute) · redirect-map เพิ่ม `/home-demo/` `/sample-page/` `/blog/2/` feed/pagination · title/description ใส่ keyword ทุกหน้า · OG card 1200×630 (`public/images/og/`) · srcset จริงผ่าน custom loader + `scripts/image-variants.py` (`public/images/_v/`) · fetchPriority hero · contrast hero-note · aria-label chapter index · JobPosting datePosted + hiringOrganization · `/blog/[slug]` (Supabase, prerender ตอน build, BlogPosting JSON-LD) + blog list + sitemap ดึงบทความ · path เก่าใน `lib/keyword-plan.ts` + frontmatter บทความ
+  - ⏳ ค้าง: เคลียร์ดิสก์ → `npm ci` + `npm install marked` → build + เช็ค redirect/หน้า → `cf:deploy` · submit sitemap + link GSC↔GA4 + mark key events (`generate_lead`, `click_phone`, `click_email`) · หน้า privacy (รอข้อความลูกค้า) · H1 หน้าแรก/บริการยังไม่มี keyword (copy ลูกค้า approve) · ย้ายบทความเก่า 35 บท (รอคอนเฟิร์มบทความ)
 - เฟส 6–8 — ⬜ TODO (pre-cutover / cutover / post-launch)
 
 ---
@@ -111,7 +118,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 |---|---|---|---|---|
 | T6.1 | review-team แยก lens: **URL-parity** (ทุก URL T3.2 → 200/301), **CWV**, **a11y**, **SEO foundation** | TODO | T5.M3 | แต่ละ lens รายงาน, lead รวม, ไม่มี P0 ค้าง |
 | T6.2 | 🚪 ลูกค้า approve preview | GATE | T6.1 | ลูกค้า approve |
-| T6.3 | เชื่อม Cloudflare + setup GSC/GA property ใหม่ | TODO | T6.2 | property verified, sitemap submit พร้อม |
+| T6.3 | Cloudflare: zone `yourgoalswesupp.com` active 2026-10-26 (NS → `brad`/`nancy.ns.cloudflare.com`, เปลี่ยนแผนจาก 10-23) + setup GSC/GA property ใหม่ · 2026-11-02: ตัดสินใจ GA4 ตรง (ไม่ใช้ GTM, ไม่ยิงแอด) + cookie banner PDPA (Consent Mode v2 basic) — โค้ดพร้อมแล้ว `lib/analytics.ts` + `components/analytics.tsx` GA4 `G-D2FGT7TTEH` ใส่ใน `site.gaMeasurementId` + deploy CF แล้ว (version 168f7322) · ⏳ ผู้ใช้: ทดสอบ Realtime, GSC Domain property (DNS TXT) + submit sitemap, mark key events + custom dimensions, link GSC↔GA4 · ⚠️ ยังไม่มีหน้านโยบายความเป็นส่วนตัว (ต้องได้ข้อความจากลูกค้า) | WIP | T6.2 | property verified, sitemap submit พร้อม |
 
 ---
 
@@ -119,7 +126,7 @@ Legend owner: 🔒 single agent · 👥 team lane (A/B/C) · 🧑‍⚖️ lead 
 
 | ID | Task | Status | Depends-on | Acceptance |
 |---|---|---|---|---|
-| T7.1 | เปลี่ยน DNS โดเมน + rollback plan เขียนไว้ | TODO | T6.3 | เว็บใหม่ live, มีขั้นตอน rollback ชัด |
+| T7.1 | **Cutover 2026-10-27** (ลูกค้า backup เว็บเก่าแล้ว + สั่งเปลี่ยนทั้งหมด): ลบ `A @`/`A www` → `45.64.187.212` ใน Cloudflare แล้วผูก custom domain apex + www เข้า Worker `supp-website-redesign` (ไม่แตะ mail/smtp/pop/ftp/MX/TXT) · Always Use HTTPS on · www 301 → apex · `lib/site.ts` url = `https://yourgoalswesupp.com`, indexable = true · 301 ครบ 42 URL เดิมจาก `migration/redirect-map.csv` (ทดสอบ live ทั้ง %XX ตัวใหญ่/เล็ก 84/84 ผ่าน) · rollback = ถอด custom domain ใน Workers → เพิ่ม `A @`/`A www` → `45.64.187.212` (DNS only) | DONE | T6.3 | เว็บใหม่ live, มีขั้นตอน rollback ชัด |
 
 ---
 

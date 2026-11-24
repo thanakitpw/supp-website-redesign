@@ -7,11 +7,11 @@ import { site } from "@/lib/site";
 import { team } from "@/lib/team";
 
 export const metadata = pageMetadata({
-  title: "About SUPP | เริ่มจากชีวิตคุณ",
+  title: "เกี่ยวกับเรา ทีมที่ปรึกษาการเงินที่มีใบอนุญาต",
   description:
-    "รู้จัก SUPP พาร์ทเนอร์ที่ช่วยให้คุณมองเรื่องเงินชัดเจนขึ้น ทีม Financial Life Partner ที่เริ่มต้นจากการรับฟังชีวิตและเป้าหมายของคุณ",
+    "รู้จัก SUPP และทีมที่ปรึกษาการเงิน Financial Life Partner ที่มีใบอนุญาตและคุณวุฒิ เริ่มจากการรับฟังชีวิตและเป้าหมายของคุณ ก่อนวางแผนเรื่องเงิน",
   path: "/about",
-  image: "/images/family-beach.webp",
+  image: "/images/og/about.jpg",
 });
 
 const expectations = [
@@ -105,6 +105,7 @@ export default function AboutPage() {
             height={863}
             sizes="100vw"
             priority
+            fetchPriority="high"
           />
           <div>
             <span>PARTNERING IN YOUR LIFE GOALS</span>

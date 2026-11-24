@@ -1,7 +1,7 @@
 ---
 ลำดับ: 2 จาก 12
 slug: comprehensive-financial-planning
-url: /blog/comprehensive-financial-planning/
+url: /blog/comprehensive-financial-planning
 title: "วางแผนการเงินแบบองค์รวม 5 ขั้นตอน จากเป้าหมายถึงทบทวนแผน"
 description: ""
 keyword_หลัก: "วางแผนการเงินแบบองค์รวม"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /about-supp/
-  - /book-a-free-consult/
+  - /services
+  - /about
+  - /contact
 ---
 
 # วางแผนการเงินแบบองค์รวม 5 ขั้นตอน จากเป้าหมายถึงทบทวนแผน

@@ -12,11 +12,11 @@ import { breadcrumbJsonLd, jsonLdScript, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Join us | Design Your Own Life",
+  title: "ร่วมงานกับเรา สมัครงานที่ปรึกษาการเงิน Financial Life Partner",
   description:
     "ออกแบบชีวิตและรายได้ของคุณเอง กับอาชีพ Financial Life Partner ที่ SUPP รู้จักบทบาทงาน เส้นทางพัฒนา และเริ่มต้นผ่าน Open House",
   path: "/join-us",
-  image: "/images/join-cover.webp",
+  image: "/images/og/join.jpg",
 });
 
 const pains = [
@@ -153,7 +153,19 @@ function jobPostingJsonLd() {
     occupationalCategory: "Personal Financial Advisors",
     directApply: false,
     url: `${site.url}/join-us`,
-    hiringOrganization: { "@id": `${site.url}/#organization` },
+    // Date this posting went live on the new site (cutover). Google requires
+    // it; bump it whenever the role description changes.
+    datePosted: "2026-10-27",
+    // Google's job rich result does not resolve an @id reference, so the
+    // organization is spelled out here.
+    hiringOrganization: {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      legalName: site.legalName,
+      sameAs: site.url,
+      logo: `${site.url}/images/logo-red.png`,
+    },
     jobLocation: {
       "@type": "Place",
       address: {
@@ -225,6 +237,7 @@ export default function JoinUsPage() {
               fill
               sizes="(max-width: 700px) 100vw, 45vw"
               priority
+              fetchPriority="high"
             />
             <div className="join-photo-caption">
               <span>YOUR NEXT CHAPTER</span>

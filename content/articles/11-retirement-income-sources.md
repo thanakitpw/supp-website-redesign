@@ -1,7 +1,7 @@
 ---
 ลำดับ: 11 จาก 12
 slug: retirement-income-sources
-url: /blog/retirement-income-sources/
+url: /blog/retirement-income-sources
 title: "เงินเกษียณจากประกันสังคมและกองทุนสำรองเลี้ยงชีพ พอหรือยัง"
 description: ""
 keyword_หลัก: "เงินเกษียณ ประกันสังคม"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # เงินเกษียณจากประกันสังคมและกองทุนสำรองเลี้ยงชีพ พอหรือยัง

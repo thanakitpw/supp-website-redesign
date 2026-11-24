@@ -1,7 +1,7 @@
 ---
 ลำดับ: 12 จาก 12
 slug: annual-financial-plan-review
-url: /blog/annual-financial-plan-review/
+url: /blog/annual-financial-plan-review
 title: "ทบทวนแผนการเงินประจำปี 6 เรื่องที่ต้องเช็ค"
 description: ""
 keyword_หลัก: "ทบทวนแผนการเงิน"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ทบทวนแผนการเงินประจำปี 6 เรื่องที่ต้องเช็ค

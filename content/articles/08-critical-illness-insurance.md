@@ -1,7 +1,7 @@
 ---
 ลำดับ: 8 จาก 12
 slug: critical-illness-insurance
-url: /blog/critical-illness-insurance/
+url: /blog/critical-illness-insurance
 title: "ประกันโรคร้ายแรง ทุนเท่าไหร่ถึงพอกับค่ารักษาและรายได้ที่หาย"
 description: ""
 keyword_หลัก: "ประกันโรคร้ายแรง"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ประกันโรคร้ายแรง ทุนเท่าไหร่ถึงพอกับค่ารักษาและรายได้ที่หาย

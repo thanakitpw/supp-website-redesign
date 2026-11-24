@@ -1,7 +1,7 @@
 ---
 ลำดับ: 7 จาก 12
 slug: life-insurance-coverage-amount
-url: /blog/life-insurance-coverage-amount/
+url: /blog/life-insurance-coverage-amount
 title: "ทุนประกันชีวิตสำหรับคนมีครอบครัว คำนวณจากหนี้และภาระ"
 description: ""
 keyword_หลัก: "ทุนประกันชีวิต"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # ทุนประกันชีวิตสำหรับคนมีครอบครัว คำนวณจากหนี้และภาระ

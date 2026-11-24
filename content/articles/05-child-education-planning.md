@@ -1,7 +1,7 @@
 ---
 ลำดับ: 5 จาก 12
 slug: child-education-planning
-url: /blog/child-education-planning/
+url: /blog/child-education-planning
 title: "วางแผนการศึกษาบุตร เตรียมเงินตามช่วงอายุลูก"
 description: ""
 keyword_หลัก: "วางแผนการศึกษาบุตร"
@@ -14,9 +14,9 @@ voice: "content/articles/VOICE-GUIDE.md"
 สถานะ: "วางแผน"
 
 ลิงก์ภายใน:
-  - /services/
-  - /book-a-free-consult/
-  - /about-supp/
+  - /services
+  - /contact
+  - /about
 ---
 
 # วางแผนการศึกษาบุตร เตรียมเงินตามช่วงอายุลูก
